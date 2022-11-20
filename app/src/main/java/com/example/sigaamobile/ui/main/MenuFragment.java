@@ -25,7 +25,7 @@ public class MenuFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mViewModel = new ViewModelProvider(this).get(MainViewModel.class);
-        // TODO: Use the ViewModel
+        /* TODO: Use the ViewModel */
     }
 
     @Nullable
@@ -41,22 +41,39 @@ public class MenuFragment extends Fragment {
         ImageView arrowDown = view.findViewById(R.id.arrow_down);
         RelativeLayout expContent = view.findViewById(R.id.frame_exp_content);
         CardView cardInfo = view.findViewById(R.id.card_menu_general_info);
+        int contentExpHeight = this.getContentExpHeight(expContent);
 
         cardInfo.setOnClickListener(v -> {
             if (arrowDown.getRotation() == 180){
-                showInfo(expContent, false);
+                showInfo(expContent,  0);
                 arrowDown.setRotation(0);
             } else {
-                showInfo(expContent, true);
+                showInfo(expContent, contentExpHeight);
                 arrowDown.setRotation(180);
             }
         });
     }
 
-    private void showInfo(RelativeLayout layoutInfo, Boolean showContent){
-        int newHeight = showContent?678:0;
+    private void showInfo(RelativeLayout expContent, int newHeight){
         AnimateChangeHeight animateChangeHeight;
-        animateChangeHeight = new AnimateChangeHeight(layoutInfo, newHeight);
+        animateChangeHeight = new AnimateChangeHeight(expContent, newHeight);
         animateChangeHeight.updateAnimate();
+    }
+
+    private int getContentExpHeight(RelativeLayout expContent){
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+        );
+        expContent.setVisibility(View.INVISIBLE);
+        expContent.setLayoutParams(params);
+        int wrapSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
+        expContent.measure(wrapSpec, wrapSpec);
+        int height = expContent.getMeasuredHeight();
+        params.height = 0;
+        params.addRule(RelativeLayout.BELOW, R.id.header_exp_menu);
+        expContent.setLayoutParams(params);
+        expContent.setVisibility(View.VISIBLE);
+        return height;
     }
 }
