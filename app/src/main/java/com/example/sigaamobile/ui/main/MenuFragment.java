@@ -1,6 +1,6 @@
 package com.example.sigaamobile.ui.main;
+
 import androidx.cardview.widget.CardView;
-import androidx.lifecycle.ViewModelProvider;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,17 +15,8 @@ import com.example.sigaamobile.utils.AnimateChangeHeight;
 
 public class MenuFragment extends Fragment {
 
-    private MainViewModel mViewModel;
-
     public static MenuFragment newInstance() {
         return new MenuFragment();
-    }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(MainViewModel.class);
-        /* TODO: Use the ViewModel */
     }
 
     @Nullable

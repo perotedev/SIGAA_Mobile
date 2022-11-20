@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">SIGAA Mobile</string>
+    <string name="sigla_app">SIGAA</string>
+    <string name="type_app">Mobile</string>
     <string name="menufragment">Fulano Ciclano de Beltrano</string>
+
+    <!--  Tela de Login  -->
+    <string name="usuario">Usuário</string>
+    <string name="senha">Senha</string>
+    <string name="hint_usuario">Digite seu usuário</string>
+    <string name="hint_senha">Digite sua senha</string>
+    <string name="entrar">Entrar</string>
 
     <!--  Informações Gerais do Usuário  -->
     <string name="matricula">Matrícula:</string>
@@ -30,4 +39,5 @@
     <string name="teste_plus">Texto de Teste Comprido</string>
     <string name="teste_plus_plus">Texto de Teste Comprido Por Demais</string>
     <string name="teste_numero">8,0171</string>
+    <string name="app_version">V1.0.0</string>
 </resources>
