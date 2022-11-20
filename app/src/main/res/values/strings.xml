@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SIGAA Mobile</string>
+    <string name="menufragment">Fulano Ciclano de Beltrano</string>
+    <string name="matricula">Matrícula: 20195523654</string>
 </resources>

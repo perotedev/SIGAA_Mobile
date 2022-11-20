@@ -4,11 +4,14 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/blueSigaa</item>
         <item name="colorOnPrimary">@color/white</item>
+        <item name="colorButtonNormal">?attr/colorPrimary</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/blueSecondarySigaa</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimary</item>
         <!-- Customize your theme here. -->
+        <item name="colorOnBackground">@color/blueSecondarySigaa</item>
+        <item name="colorAccent">?attr/colorPrimary</item>
     </style>
 </resources>

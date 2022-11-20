@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,23 +8,39 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.MenuFragment">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_menu_general_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="15dp"
+        app:cardCornerRadius="8dp">
+
+        <com.robertlevonyan.views.expandable.Expandable
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:exp_animateExpand="true">
+
+            <include
+                android:id="@+id/header"
+                layout="@layout/expandable_header_menu" />
+
+            <include
+                android:id="@+id/content"
+                layout="@layout/expandable_content_menu" />
+
+        </com.robertlevonyan.views.expandable.Expandable>
+    </androidx.cardview.widget.CardView>
+
     <TextView
         android:id="@+id/message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MainFragment"
+        android:text="@string/menufragment"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/bg_dark"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/message"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/expandable_header_menu"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?colorOnBackground">
+
+    <ImageView
+        android:id="@+id/imageViewExpandableHeader"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewExpandableHeader1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="15dp"
+        android:tint="?colorAccent"
+        app:srcCompat="@drawable/ic_baseline_account_circle_24"
+        tools:ignore="UseAppTint" />
+
+    <TextView
+        android:id="@+id/textViewExpandableHeader1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/menufragment"
+        app:layout_constraintBottom_toTopOf="@+id/textViewExpandableHeader2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewExpandableHeader"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewExpandableHeader2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/matricula"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewExpandableHeader"
+        app:layout_constraintTop_toBottomOf="@+id/textViewExpandableHeader1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
