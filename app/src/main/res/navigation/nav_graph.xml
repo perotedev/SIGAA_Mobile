@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/login_fragment">
+
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.example.sigaamobile.ui.main.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_fragment_to_fragment_menu"
+            app:destination="@id/fragment_menu" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_menu"
+        android:name="com.example.sigaamobile.ui.main.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+    </fragment>
+
+</navigation>
