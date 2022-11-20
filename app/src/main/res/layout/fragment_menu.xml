@@ -23,21 +23,26 @@
             android:layout_marginHorizontal="15dp"
             app:cardCornerRadius="8dp">
 
-            <com.robertlevonyan.views.expandable.Expandable
-                android:id="@+id/expandable_view_menu"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:exp_animateExpand="true">
+                android:layout_height="wrap_content">
 
                 <include
                     android:id="@+id/header_exp_menu"
                     layout="@layout/expandable_header_menu" />
 
-                <include
-                    android:id="@+id/content_exp_menu"
-                    layout="@layout/expandable_content_menu" />
+                <RelativeLayout
+                    android:id="@+id/frame_exp_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:animateLayoutChanges="true"
+                    android:layout_below="@+id/header_exp_menu">
 
-            </com.robertlevonyan.views.expandable.Expandable>
+                    <include
+                        android:id="@+id/content_exp_menu"
+                        layout="@layout/expandable_content_menu" />
+                </RelativeLayout>
+            </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView

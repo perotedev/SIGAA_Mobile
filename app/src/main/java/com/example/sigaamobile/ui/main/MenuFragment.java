@@ -1,21 +1,17 @@
 package com.example.sigaamobile.ui.main;
-
-import androidx.annotation.RequiresApi;
+import androidx.cardview.widget.CardView;
 import androidx.lifecycle.ViewModelProvider;
-
-import android.os.Build;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import com.example.sigaamobile.R;
-import com.robertlevonyan.views.expandable.Expandable;
+import com.example.sigaamobile.utils.AnimateChangeHeight;
 
 public class MenuFragment extends Fragment {
 
@@ -42,7 +38,25 @@ public class MenuFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        Expandable expandable = view.findViewById(R.id.expandable_view_menu);
+        ImageView arrowDown = view.findViewById(R.id.arrow_down);
+        RelativeLayout expContent = view.findViewById(R.id.frame_exp_content);
+        CardView cardInfo = view.findViewById(R.id.card_menu_general_info);
 
+        cardInfo.setOnClickListener(v -> {
+            if (arrowDown.getRotation() == 180){
+                showInfo(expContent, false);
+                arrowDown.setRotation(0);
+            } else {
+                showInfo(expContent, true);
+                arrowDown.setRotation(180);
+            }
+        });
+    }
+
+    private void showInfo(RelativeLayout layoutInfo, Boolean showContent){
+        int newHeight = showContent?678:0;
+        AnimateChangeHeight animateChangeHeight;
+        animateChangeHeight = new AnimateChangeHeight(layoutInfo, newHeight);
+        animateChangeHeight.updateAnimate();
     }
 }
