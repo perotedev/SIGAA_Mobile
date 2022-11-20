@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraint_expandable_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/card2"
+        android:layout_marginEnd="7dp"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="?colorOnPrimary">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/cr_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cr_sigla"
+                android:textColor="?colorAccent"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_below="@+id/cr_title"
+                android:id="@+id/text_cr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/teste_numero"
+                android:textAlignment="center"
+                android:layout_marginBottom="5dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/card1"
+        app:layout_constraintEnd_toStartOf="@+id/card3"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="?colorOnPrimary">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/mc_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mc_sigla"
+                android:textColor="?colorAccent"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_below="@+id/mc_title"
+                android:id="@+id/text_mc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/teste_numero"
+                android:textAlignment="center"
+                android:layout_marginBottom="5dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/card2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="7dp"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="8dp"
+        app:cardBackgroundColor="?colorOnPrimary">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/mcn_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mcn_sigla"
+                android:textColor="?colorAccent"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_below="@+id/mcn_title"
+                android:id="@+id/text_mcn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/teste_numero"
+                android:textAlignment="center"
+                android:layout_marginBottom="5dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

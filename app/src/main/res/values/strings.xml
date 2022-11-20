@@ -1,5 +1,33 @@
 <resources>
     <string name="app_name">SIGAA Mobile</string>
     <string name="menufragment">Fulano Ciclano de Beltrano</string>
-    <string name="matricula">Matrícula: 20195523654</string>
+
+    <!--  Informações Gerais do Usuário  -->
+    <string name="matricula">Matrícula:</string>
+    <string name="mat_number">20195523654</string>
+    <string name="curso">Curso:</string>
+    <string name="nivel">Nível:</string>
+    <string name="status">Status:</string>
+    <string name="email">E-mail:</string>
+    <string name="entrada">Entrada:</string>
+    <string name="cr_sigla">CR</string>
+    <string name="mc_sigla">MC</string>
+    <string name="mcn_sigla">MCN</string>
+    <string name="ch_obrigatoria">CH Obrigatória Pendente:</string>
+    <string name="ch_optativa">CH Optativa Pendente:</string>
+    <string name="ch_total">CH Total Currículo:</string>
+    <string name="ch_complementar">CH Complementar Pendente:</string>
+
+    <!--  Botões Menu  -->
+    <string name="notas">Ver Notas</string>
+    <string name="frequencia">Frequência</string>
+    <string name="atividades">Atividades</string>
+    <string name="documentos">Emitir Documentos</string>
+
+
+    <!--  Texto pra Teste  -->
+    <string name="teste">Texto de Teste</string>
+    <string name="teste_plus">Texto de Teste Comprido</string>
+    <string name="teste_plus_plus">Texto de Teste Comprido Por Demais</string>
+    <string name="teste_numero">8,0171</string>
 </resources>

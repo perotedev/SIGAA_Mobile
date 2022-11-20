@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,41 +8,205 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.MenuFragment">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_menu_general_info"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="15dp"
-        android:layout_marginHorizontal="15dp"
-        app:cardCornerRadius="8dp">
+        android:layout_height="wrap_content">
 
-        <com.robertlevonyan.views.expandable.Expandable
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_menu_general_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:exp_animateExpand="true">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="15dp"
+            app:cardCornerRadius="8dp">
 
-            <include
-                android:id="@+id/header"
-                layout="@layout/expandable_header_menu" />
+            <com.robertlevonyan.views.expandable.Expandable
+                android:id="@+id/expandable_view_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:exp_animateExpand="true">
 
-            <include
-                android:id="@+id/content"
-                layout="@layout/expandable_content_menu" />
+                <include
+                    android:id="@+id/header_exp_menu"
+                    layout="@layout/expandable_header_menu" />
 
-        </com.robertlevonyan.views.expandable.Expandable>
-    </androidx.cardview.widget.CardView>
+                <include
+                    android:id="@+id/content_exp_menu"
+                    layout="@layout/expandable_content_menu" />
 
-    <TextView
-        android:id="@+id/message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/menufragment"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            </com.robertlevonyan.views.expandable.Expandable>
+        </androidx.cardview.widget.CardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_ver_notas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/card_menu_general_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_frequencia"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="7dp"
+            app:cardBackgroundColor="?colorButtonNormal"
+            app:cardCornerRadius="8dp"
+            android:elevation="2dp"
+            app:cardElevation="2dp"
+            app:cardMaxElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingVertical="20dp">
+
+                <ImageView
+                    android:id="@+id/icon_notas"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/bar_chart_fill"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/text_ver_notas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/icon_notas"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="15sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="@string/notas" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_frequencia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/card_menu_general_info"
+            app:layout_constraintStart_toEndOf="@id/btn_ver_notas"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="7dp"
+            app:cardBackgroundColor="?colorButtonNormal"
+            app:cardCornerRadius="8dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingVertical="20dp">
+
+                <ImageView
+                    android:id="@+id/icon_frequencia"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/calendar_2_week_fill"
+                    app:tint="@color/white"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/text_frequencia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/icon_frequencia"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="15sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="@string/frequencia" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_atividades"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/btn_ver_notas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_documentos"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="7dp"
+            app:cardBackgroundColor="?colorButtonNormal"
+            app:cardCornerRadius="8dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingVertical="20dp">
+
+                <ImageView
+                    android:id="@+id/icon_atividades"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/ui_checks"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/text_atividades"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/icon_atividades"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="@string/atividades" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_documentos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/btn_frequencia"
+            app:layout_constraintStart_toEndOf="@+id/btn_atividades"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="15dp"
+            app:cardBackgroundColor="?colorButtonNormal"
+            app:cardCornerRadius="8dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingVertical="20dp">
+
+                <ImageView
+                    android:id="@+id/icon_documentos"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/file_pdf_fill"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/text_documentos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/icon_documentos"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="15sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:text="@string/documentos" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

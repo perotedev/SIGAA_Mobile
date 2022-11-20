@@ -9,6 +9,16 @@
     android:background="?colorOnBackground">
 
     <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewExpandableHeader"
+        app:layout_constraintEnd_toEndOf="@id/imageViewExpandableHeader"
+        app:layout_constraintStart_toStartOf="@id/imageViewExpandableHeader"
+        app:layout_constraintTop_toTopOf="@id/imageViewExpandableHeader"
+        app:srcCompat="@android:drawable/ic_notification_overlay"
+        app:tint="?colorOnPrimary" />
+
+    <ImageView
         android:id="@+id/imageViewExpandableHeader"
         android:layout_width="38dp"
         android:layout_height="38dp"
@@ -17,16 +27,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="15dp"
-        android:tint="?colorAccent"
         app:srcCompat="@drawable/ic_baseline_account_circle_24"
-        tools:ignore="UseAppTint" />
+        app:tint="?colorAccent" />
 
     <TextView
         android:id="@+id/textViewExpandableHeader1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="5dp"
         android:layout_marginEnd="50dp"
         android:text="@string/menufragment"
         app:layout_constraintBottom_toTopOf="@+id/textViewExpandableHeader2"
@@ -36,15 +45,26 @@
 
     <TextView
         android:id="@+id/textViewExpandableHeader2"
-        android:layout_width="0dp"
+        android:layout_width="63dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="5dp"
         android:layout_marginEnd="50dp"
         android:text="@string/matricula"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/textViewExpandableHeader3"
         app:layout_constraintStart_toEndOf="@+id/imageViewExpandableHeader"
         app:layout_constraintTop_toBottomOf="@+id/textViewExpandableHeader1" />
+
+    <TextView
+        android:id="@+id/textViewExpandableHeader3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/mat_number"
+        app:layout_constraintBottom_toBottomOf="@id/textViewExpandableHeader2"
+        app:layout_constraintStart_toEndOf="@+id/textViewExpandableHeader2"
+        app:layout_constraintTop_toTopOf="@+id/textViewExpandableHeader2" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,5 +13,6 @@
         <!-- Customize your theme here. -->
         <item name="colorOnBackground">@color/blueSecondarySigaa</item>
         <item name="colorAccent">?attr/colorPrimary</item>
+        <item name="android:textColor">@color/text_dark</item>
     </style>
 </resources>

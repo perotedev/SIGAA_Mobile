@@ -1,7 +1,9 @@
 package com.example.sigaamobile.ui.main;
 
+import androidx.annotation.RequiresApi;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.sigaamobile.R;
+import com.robertlevonyan.views.expandable.Expandable;
 
 public class MenuFragment extends Fragment {
 
@@ -36,4 +39,10 @@ public class MenuFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_menu, container, false);
     }
 
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        Expandable expandable = view.findViewById(R.id.expandable_view_menu);
+
+    }
 }

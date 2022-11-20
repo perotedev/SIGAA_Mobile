@@ -1,32 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/expandable_content_menu"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="?colorOnBackground">
+    android:id="@+id/expandable_content_menu"
+    android:background="?colorOnBackground"
+    android:paddingHorizontal="20dp"
+    android:paddingBottom="15dp">
 
-    <TextView
-        android:id="@+id/text_content_1"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/menufragment"
-        android:layout_margin="20dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/text_content_2"/>
+        android:id="@+id/info1">
 
-    <TextView
-        android:id="@+id/text_content_2"
+        <TextView
+            android:id="@+id/curso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/curso"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/text_curso_nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/teste_plus_plus"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/curso"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/menufragment"
-        android:layout_marginBottom="20dp"
-        android:layout_marginHorizontal="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/text_content_1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        android:id="@+id/info2"
+        android:layout_below="@+id/info1">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/nivel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nivel"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/text_nivel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/teste_plus"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/nivel"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/info3"
+        android:layout_below="@+id/info2">
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/text_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/teste_plus"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/status"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/info4"
+        android:layout_below="@+id/info3">
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/text_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/teste_plus_plus"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/email"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/info5"
+        android:layout_below="@+id/info4">
+
+        <TextView
+            android:id="@+id/entrada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/entrada"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/text_entrada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/teste_plus_plus"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/entrada"
+            />
+    </RelativeLayout>
+
+    <include
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/constraint_info"
+       android:layout_below="@+id/info5"
+       android:layout_marginVertical="10dp"
+       layout="@layout/cards_info_academico"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/info6"
+        android:layout_below="@+id/constraint_info">
+
+        <TextView
+            android:id="@+id/ch_obrigatoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ch_obrigatoria"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/text_ch_obrigatoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/teste_numero"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/ch_obrigatoria"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/info7"
+        android:layout_below="@+id/info6">
+
+        <TextView
+            android:id="@+id/ch_optativa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ch_optativa"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/text_ch_optativa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/teste_numero"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/ch_optativa"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/info8"
+        android:layout_below="@+id/info7">
+
+        <TextView
+            android:id="@+id/ch_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ch_total"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/text_ch_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/teste_numero"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/ch_total"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/info9"
+        android:layout_below="@+id/info8">
+
+        <TextView
+            android:id="@+id/ch_complementar_pendente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ch_complementar"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/text_ch_complementar_pendente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/teste_numero"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/ch_complementar_pendente"
+            />
+    </RelativeLayout>
+</RelativeLayout>
