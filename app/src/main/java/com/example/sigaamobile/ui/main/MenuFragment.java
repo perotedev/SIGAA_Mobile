@@ -87,8 +87,7 @@ public class MenuFragment extends Fragment {
     }
 
     private void showInfo(RelativeLayout expContent, int newHeight){
-        AnimateChangeHeight animateChangeHeight;
-        animateChangeHeight = new AnimateChangeHeight(expContent, newHeight);
+        AnimateChangeHeight animateChangeHeight = new AnimateChangeHeight(expContent, newHeight);
         animateChangeHeight.updateAnimate();
     }
 
