@@ -35,6 +35,7 @@
 
     <!--  Descrições  -->
     <string name="desc_btn_voltar">Botão de Voltar</string>
+    <string name="desc_btn_main_menu">Botão do Menu Lateral</string>
 
     <!--  Texto pra Teste  -->
     <string name="teste">Texto de Teste</string>

@@ -14,6 +14,8 @@ import android.widget.RelativeLayout;
 import com.example.sigaamobile.R;
 import com.example.sigaamobile.utils.AnimateChangeHeight;
 
+import java.util.Objects;
+
 public class MenuFragment extends Fragment {
 
     public static MenuFragment newInstance() {
@@ -45,6 +47,8 @@ public class MenuFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        requireActivity().findViewById(R.id.btn_main_menu).setVisibility(View.VISIBLE);
+        requireActivity().findViewById(R.id.btn_voltar).setVisibility(View.INVISIBLE);
 
         ImageView arrowDown = view.findViewById(R.id.arrow_down);
         RelativeLayout expContent = view.findViewById(R.id.frame_exp_content);
