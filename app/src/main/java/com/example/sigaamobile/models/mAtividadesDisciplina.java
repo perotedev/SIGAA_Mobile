@@ -7,6 +7,7 @@ import lombok.Data;
 public class mAtividadesDisciplina {
     private String nomeDisciplina;
     private ArrayList<mAtividade> atividades;
+    private int disciplinaId;
 
     public mAtividadesDisciplina(){}
 }

@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class mFrequenciaAula {
-    private int qtdPresencas, qtdFaltas, dataAula;
+    private int qtdPresencas, qtdFaltas, dataAula, alunoId, frequenciaId;
 
     public mFrequenciaAula(){}
 }

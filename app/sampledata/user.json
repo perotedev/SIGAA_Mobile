@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "username": "renato_barbosa",
+      "password": "12345678",
+      "token": "@$df7dFG&DW9uhueoeuh9$Oe&&65RFSvudwe",
+      "userId": 32
+    },
+    {
+      "username": "renata_campos",
+      "password": "12345678",
+      "token": "DW9uhueo@$df7dFG&euh9$Oe&FSvu&65Rdwe",
+      "userId": 32
+    }
+  ]
+}

@@ -25,4 +25,10 @@ public class UserTest {
         mUser.setUserId(12);
         assertEquals(12, mUser.getUserId());
     }
+
+    @Test
+    public void tokenTest(){
+        mUser.setToken("odfiads%#$R¨&UIFDHENud9guyf7gdeuay");
+        assertEquals("odfiads%#$R¨&UIFDHENud9guyf7gdeuay", mUser.getToken());
+    }
 }
