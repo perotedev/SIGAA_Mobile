@@ -9,4 +9,6 @@ public class mFrequenciaTodasAulas {
     private String nomeDisciplina;
     private float percentualFrequencia;
     private int fequencia, aulasMinistradas;
+
+    public mFrequenciaTodasAulas(){}
 }

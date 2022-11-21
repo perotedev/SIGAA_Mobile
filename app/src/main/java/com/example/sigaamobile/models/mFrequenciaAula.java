@@ -5,4 +5,6 @@ import lombok.Data;
 @Data
 public class mFrequenciaAula {
     private int qtdPresencas, qtdFaltas, dataAula;
+
+    public mFrequenciaAula(){}
 }

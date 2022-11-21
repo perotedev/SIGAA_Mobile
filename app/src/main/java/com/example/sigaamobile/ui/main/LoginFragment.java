@@ -1,13 +1,15 @@
 package com.example.sigaamobile.ui.main;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+
 import com.example.sigaamobile.R;
 
 public class LoginFragment extends Fragment {
@@ -38,5 +40,9 @@ public class LoginFragment extends Fragment {
         requireActivity().findViewById(R.id.btn_main_menu).setVisibility(View.INVISIBLE);
         requireActivity().findViewById(R.id.btn_voltar).setVisibility(View.INVISIBLE);
         requireActivity().findViewById(R.id.btn_sair).setVisibility(View.VISIBLE);
+    }
+
+    private void validarLogin(String username, String password){
+
     }
 }
