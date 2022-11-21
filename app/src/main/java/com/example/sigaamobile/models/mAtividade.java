@@ -5,10 +5,9 @@ import lombok.Data;
 
 @Data
 public class mAtividade {
-    private String titulo, descricao, status, anexoAtividadeUrl,
-            anexoRespostaUrl, comentarioAluno, comentarioProfessor;
+    private String titulo, descricao, status, anexoAtividadeUrl, comentarioProfessor;
     private int atividadeId, statusId, disciplinaId, dataInicio, dataFim;
-    private File anexoAtividadeFile, anexoRespostaFile;
+    private File anexoAtividadeFile;
 
     public  mAtividade(){}
 }

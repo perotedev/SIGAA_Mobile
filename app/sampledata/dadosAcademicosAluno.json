@@ -1,0 +1,26 @@
+{
+  "dadosAcademicos": [
+    {
+      "idAluno": 1,
+      "idCurso": 1,
+      "cr": 8.0145,
+      "mc": 7.9655,
+      "mcn": 9.4521,
+      "ch_obrigatoriaPendente": 120,
+      "ch_optativaPendente": 60,
+      "ch_totalCurriculo": 2380,
+      "ch_complementarPendente": 0
+    },
+    {
+      "idAluno": 2,
+      "idCurso": 1,
+      "cr": 7.9178,
+      "mc": 6.5601,
+      "mcn": 8.5477,
+      "ch_obrigatoriaPendente": 80,
+      "ch_optativaPendente": 20,
+      "ch_totalCurriculo": 2380,
+      "ch_complementarPendente": 0
+    }
+  ]
+}

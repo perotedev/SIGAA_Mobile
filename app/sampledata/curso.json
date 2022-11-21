@@ -1,0 +1,14 @@
+{
+  "cursos": [
+    {
+      "idCurso": 1,
+      "nomeCurso": "Paisagismo",
+      "nivelCurso": "Técnico Integrado"
+    },
+    {
+      "idCurso": 2,
+      "nomeCurso": "Informática",
+      "nivelCurso": "Técnico Integrado"
+    }
+  ]
+}

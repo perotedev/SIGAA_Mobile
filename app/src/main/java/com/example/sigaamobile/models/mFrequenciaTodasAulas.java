@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 public class mFrequenciaTodasAulas {
-    private ArrayList<mFrequenciaAula> frequencias;
+    private ArrayList<Integer> frequenciasIds;
     private String nomeDisciplina;
     private float percentualFrequencia;
     private int fequencia, aulasMinistradas;

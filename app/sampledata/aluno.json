@@ -3,7 +3,22 @@
     {
       "idAluno": 1,
       "idUser": 32,
-      "nomeAluno": "Roberto Olibeira Barbosa"
+      "idCurso": 1,
+      "statusAluno": 1,
+      "dataEntrada": 1558425944,
+      "nomeAluno": "Roberto Olibeira Barbosa",
+      "email": "roberto.barbosa@ifam.edu.br",
+      "matricula": "2019056774"
+    },
+    {
+      "idAluno": 2,
+      "idUser": 33,
+      "idCurso": 1,
+      "statusAluno": 1,
+      "dataEntrada": 1558425944,
+      "nomeAluno": "Renata Pinheiro Campos",
+      "email": "renata.campos@ifam.edu.br",
+      "matricula": "2019057789"
     }
   ]
 }
