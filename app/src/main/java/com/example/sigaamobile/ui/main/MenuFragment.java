@@ -47,9 +47,8 @@ public class MenuFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        requireActivity().findViewById(R.id.btn_main_menu).setVisibility(View.VISIBLE);
-        requireActivity().findViewById(R.id.btn_voltar).setVisibility(View.INVISIBLE);
 
+        this.setNavBarButtons();
         ImageView arrowDown = view.findViewById(R.id.arrow_down);
         RelativeLayout expContent = view.findViewById(R.id.frame_exp_content);
         CardView cardInfo = view.findViewById(R.id.card_menu_general_info);
@@ -87,5 +86,11 @@ public class MenuFragment extends Fragment {
         expContent.setLayoutParams(params);
         expContent.setVisibility(View.VISIBLE);
         return height;
+    }
+
+    private void setNavBarButtons(){
+        requireActivity().findViewById(R.id.btn_main_menu).setVisibility(View.VISIBLE);
+        requireActivity().findViewById(R.id.btn_voltar).setVisibility(View.INVISIBLE);
+        requireActivity().findViewById(R.id.btn_sair).setVisibility(View.INVISIBLE);
     }
 }

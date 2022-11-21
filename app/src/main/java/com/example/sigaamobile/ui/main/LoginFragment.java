@@ -25,13 +25,18 @@ public class LoginFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        requireActivity().findViewById(R.id.btn_main_menu).setVisibility(View.INVISIBLE);
-        requireActivity().findViewById(R.id.btn_voltar).setVisibility(View.VISIBLE);
 
+        this.setNavBarButtons();
         AppCompatButton btnEntrar = view.findViewById(R.id.btn_entrar);
 
         btnEntrar.setOnClickListener(v -> {
             NavHostFragment.findNavController(LoginFragment.this).navigate(R.id.fragment_menu);
         });
+    }
+
+    private void setNavBarButtons(){
+        requireActivity().findViewById(R.id.btn_main_menu).setVisibility(View.INVISIBLE);
+        requireActivity().findViewById(R.id.btn_voltar).setVisibility(View.INVISIBLE);
+        requireActivity().findViewById(R.id.btn_sair).setVisibility(View.VISIBLE);
     }
 }

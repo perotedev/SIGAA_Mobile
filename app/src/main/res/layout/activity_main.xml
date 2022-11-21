@@ -49,6 +49,19 @@
                     android:contentDescription="@string/desc_btn_main_menu"
                     android:visibility="invisible"/>
 
+                <ImageButton
+                    android:id="@+id/btn_sair"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/logout_24"
+                    android:backgroundTint="@color/white"
+                    android:paddingStart="5dp"
+                    android:rotation="180"
+                    android:paddingEnd="10dp"
+                    android:paddingVertical="5dp"
+                    android:contentDescription="@string/desc_btn_sair"
+                    android:onClick="voltar"/>
+
                 <TextView
                     android:layout_centerInParent="true"
                     android:id="@+id/app_toolbar_title"
