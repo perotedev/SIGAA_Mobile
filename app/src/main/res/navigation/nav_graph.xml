@@ -25,11 +25,21 @@
             android:id="@+id/action_fragment_menu_to_notasFragment"
             app:destination="@id/notasFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_fragment_menu_to_documentosFragment"
+            app:destination="@id/documentosFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
+
     <fragment
         android:id="@+id/notasFragment"
         android:name="com.example.sigaamobile.ui.main.NotasFragment"
         android:label="fragment_notas"
         tools:layout="@layout/fragment_notas" />
+    <fragment
+        android:id="@+id/documentosFragment"
+        android:name="com.example.sigaamobile.ui.main.DocumentosFragment"
+        android:label="fragment_documentos"
+        tools:layout="@layout/fragment_documentos" />
 
 </navigation>

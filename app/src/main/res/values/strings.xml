@@ -40,6 +40,14 @@
     <string name="rep">REP</string>
     <string name="res">RES</string>
 
+    <!--  Tela Documentos  -->
+    <string name="doc_historico">Histórico Escolar</string>
+    <string name="desc_doc_historico">Emita seu histórico acadêmico contendo as notas de todas as disciplinas que cursou.</string>
+    <string name="doc_declaracao">Declaração de Vínculo</string>
+    <string name="desc_doc_declaracao">Emita a declaração de vínculo para devidos fins, inclusive meia entrada em cinemas e eventos.</string>
+    <string name="doc_matricula">Atestado de Matrícula</string>
+    <string name="desc_doc_matricula">Emita o atestado de matrícula contendo as disciplinas em que você está matriculado.</string>
+
     <!--  Descrições  -->
     <string name="desc_btn_voltar">Botão de Voltar</string>
     <string name="desc_btn_main_menu">Botão do Menu Lateral</string>

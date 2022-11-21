@@ -82,7 +82,7 @@ public class MenuFragment extends Fragment {
         });
 
         btnDocumentos.setOnClickListener(v -> {
-//            NavHostFragment.findNavController(MenuFragment.this).navigate(R.id.notasFragment);
+            NavHostFragment.findNavController(MenuFragment.this).navigate(R.id.documentosFragment);
         });
     }
 
