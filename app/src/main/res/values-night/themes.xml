@@ -6,7 +6,7 @@
         <item name="colorOnPrimary">@color/black</item>
         <item name="colorButtonNormal">@color/bg_dark</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/blueSecondarySigaa</item>
+        <item name="colorSecondary">@color/white</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorButtonNormal</item>
