@@ -18,7 +18,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/relavite_app_title"
         android:src="@mipmap/sigaa_logo_white"
-        app:tint="?colorSecondary" />
+        app:tint="?colorSecondary"
+        android:contentDescription="@string/sigaa_logo" />
 
 <!--    <ImageView-->
 <!--        android:id="@+id/sigaa_logo"-->
@@ -46,7 +47,7 @@
             android:text="@string/sigla_app"
             android:layout_marginEnd="2dp"
             android:textAlignment="textEnd"
-            android:textColor="?colorPrimary"
+            android:textColor="?colorAccent"
             android:textStyle="bold"
             android:textSize="40sp"/>
 
@@ -95,7 +96,9 @@
         android:background="@drawable/edit_text_bg"
         android:paddingVertical="5dp"
         android:paddingHorizontal="15dp"
-        android:minHeight="45dp"/>
+        android:minHeight="45dp"
+        android:inputType="text"
+        tools:ignore="Autofill" />
 
     <TextView
         android:id="@+id/title_senha"
@@ -120,7 +123,8 @@
         android:paddingVertical="5dp"
         android:paddingHorizontal="15dp"
         android:minHeight="45dp"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword"
+        android:autofillHints="password" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_entrar"

@@ -29,6 +29,14 @@
             android:id="@+id/action_fragment_menu_to_documentosFragment"
             app:destination="@id/documentosFragment"
             app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_fragment_menu_to_atividadesFragment"
+            app:destination="@id/atividadesFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_fragment_menu_to_frequenciaFragment"
+            app:destination="@id/frequenciaFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
 
     <fragment
@@ -41,5 +49,15 @@
         android:name="com.example.sigaamobile.ui.main.DocumentosFragment"
         android:label="fragment_documentos"
         tools:layout="@layout/fragment_documentos" />
+    <fragment
+        android:id="@+id/atividadesFragment"
+        android:name="com.example.sigaamobile.ui.main.AtividadesFragment"
+        android:label="fragment_atividades"
+        tools:layout="@layout/fragment_atividades" />
+    <fragment
+        android:id="@+id/frequenciaFragment"
+        android:name="com.example.sigaamobile.ui.main.FrequenciaFragment"
+        android:label="fragment_frequencia"
+        tools:layout="@layout/fragment_frequencia" />
 
 </navigation>

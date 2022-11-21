@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 import com.example.sigaamobile.MainActivity;
 import com.example.sigaamobile.R;
 
-public class DocumentosFragment extends Fragment {
+public class AtividadesFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class DocumentosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_documentos, container, false);
+        return inflater.inflate(R.layout.fragment_atividades, container, false);
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {

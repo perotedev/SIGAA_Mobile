@@ -22,7 +22,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/relavite_app_title"
             android:src="@mipmap/sigaa_logo_white"
-            app:tint="?colorSecondary" />
+            app:tint="?colorSecondary"
+            android:contentDescription="@string/sigaa_logo" />
 
         <RelativeLayout
             android:id="@+id/relavite_app_title"
@@ -39,7 +40,7 @@
                 android:text="@string/sigla_app"
                 android:layout_marginEnd="2dp"
                 android:textAlignment="textEnd"
-                android:textColor="?colorPrimary"
+                android:textColor="?colorAccent"
                 android:textStyle="bold"
                 android:textSize="40sp"/>
 

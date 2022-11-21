@@ -49,6 +49,7 @@
     <string name="desc_doc_matricula">Emita o atestado de matrícula contendo as disciplinas em que você está matriculado.</string>
 
     <!--  Descrições  -->
+    <string name="sigaa_logo">Logo do SIGAA</string>
     <string name="desc_btn_voltar">Botão de Voltar</string>
     <string name="desc_btn_main_menu">Botão do Menu Lateral</string>
     <string name="desc_btn_sair">Botão de Sair do Aplicativo</string>

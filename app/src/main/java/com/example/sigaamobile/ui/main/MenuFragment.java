@@ -70,20 +70,24 @@ public class MenuFragment extends Fragment {
         });
 
         btnVerNotas.setOnClickListener(v -> {
-            NavHostFragment.findNavController(MenuFragment.this).navigate(R.id.notasFragment);
+            this.navigateTo(R.id.notasFragment);
         });
 
         btnFrequenccia.setOnClickListener(v -> {
-//            NavHostFragment.findNavController(MenuFragment.this).navigate(R.id.notasFragment);
+            this.navigateTo(R.id.frequenciaFragment);
         });
 
         btnAtividades.setOnClickListener(v -> {
-//            NavHostFragment.findNavController(MenuFragment.this).navigate(R.id.notasFragment);
+            this.navigateTo(R.id.atividadesFragment);
         });
 
         btnDocumentos.setOnClickListener(v -> {
-            NavHostFragment.findNavController(MenuFragment.this).navigate(R.id.documentosFragment);
+            this.navigateTo(R.id.documentosFragment);
         });
+    }
+
+    private void navigateTo(int fragmentId){
+        NavHostFragment.findNavController(MenuFragment.this).navigate(fragmentId);
     }
 
     private void showInfo(RelativeLayout expContent, int newHeight){
