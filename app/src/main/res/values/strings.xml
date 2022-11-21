@@ -48,6 +48,12 @@
     <string name="doc_matricula">Atestado de Matrícula</string>
     <string name="desc_doc_matricula">Emita o atestado de matrícula contendo as disciplinas em que você está matriculado.</string>
 
+    <!--  Tela Frequência  -->
+    <string name="data_aula">Data</string>
+    <string name="situacao_frequencia">Situação</string>
+    <string name="frequencia_aluno">Frequência</string>
+    <string name="aulas_ministradas">Aulas Ministradas</string>
+
     <!--  Descrições  -->
     <string name="sigaa_logo">Logo do SIGAA</string>
     <string name="desc_btn_voltar">Botão de Voltar</string>
