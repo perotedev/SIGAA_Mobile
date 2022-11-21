@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_notas"
+    android:layout_marginBottom="15dp"
+    app:cardCornerRadius="8dp"
+    android:elevation="2dp"
+    app:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/bg_title_card_nota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?colorAccent">
+
+            <TextView
+                android:id="@+id/title_card_nota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/teste_plus_plus"
+                android:textStyle="bold"
+                android:textColor="?colorOnPrimary"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="8dp"
+                android:textSize="15sp"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bg_content_card_nota"
+            android:layout_below="@+id/bg_title_card_nota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?colorOnBackground"
+            android:paddingVertical="10dp">
+
+            <RelativeLayout
+                android:id="@+id/relative1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/relative2">
+
+                <TextView
+                    android:id="@+id/title_nota1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/und1"
+                    android:textStyle="bold"
+                    android:textColor="?colorAccent"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/content_nota1"
+                    android:layout_below="@+id/title_nota1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/teste_nota"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/relative1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/relative3">
+
+                <TextView
+                    android:id="@+id/title_nota2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/und2"
+                    android:textStyle="bold"
+                    android:textColor="?colorAccent"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/content_nota2"
+                    android:layout_below="@+id/title_nota2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/teste_nota"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/relative2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/relative4">
+
+                <TextView
+                    android:id="@+id/title_nota3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/und3"
+                    android:textStyle="bold"
+                    android:textColor="?colorAccent"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/content_nota3"
+                    android:layout_below="@+id/title_nota3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/teste_nota"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/relative3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/relative5">
+
+                <TextView
+                    android:id="@+id/title_rep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rep"
+                    android:textStyle="bold"
+                    android:textColor="?colorAccent"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/content_rep"
+                    android:layout_below="@+id/title_rep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/teste_nota"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/relative4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/title_res"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/res"
+                    android:textStyle="bold"
+                    android:textColor="?colorAccent"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/content_res"
+                    android:layout_below="@+id/title_res"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/teste_nota"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

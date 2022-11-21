@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="blueSigaa">#404E82</color>
-    <color name="blueSecondarySigaa">#C4D2EB</color>
+<!--    <color name="blueSecondarySigaa">#C4D2EB</color>-->
+    <color name="blueSecondarySigaa">#EFF3FA</color>
     <color name="bgSigaa">#EFF3FA</color>
     <color name="bgError">#ED3338</color>
     <color name="black">#FF000000</color>
@@ -9,4 +10,5 @@
     <color name="bg_dark">#2c2c2c</color>
     <color name="transparent">#80000000</color>
     <color name="text_dark">#4A4A4A</color>
+    <color name="bg_light">#EFF3FA</color>
 </resources>

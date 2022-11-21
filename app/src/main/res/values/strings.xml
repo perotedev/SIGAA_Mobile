@@ -33,6 +33,13 @@
     <string name="atividades">Atividades</string>
     <string name="documentos">Documentos</string>
 
+    <!--  Tela Ver Notas  -->
+    <string name="und1">UND 1</string>
+    <string name="und2">UND 2</string>
+    <string name="und3">UND 3</string>
+    <string name="rep">REP</string>
+    <string name="res">RES</string>
+
     <!--  Descrições  -->
     <string name="desc_btn_voltar">Botão de Voltar</string>
     <string name="desc_btn_main_menu">Botão do Menu Lateral</string>
@@ -43,6 +50,7 @@
     <string name="teste_plus">Texto de Teste Comprido</string>
     <string name="teste_plus_plus">Texto de Teste Comprido Por Demais</string>
     <string name="teste_numero">8,0171</string>
+    <string name="teste_nota">8,5</string>
     <string name="app_version">V1.0.0</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
