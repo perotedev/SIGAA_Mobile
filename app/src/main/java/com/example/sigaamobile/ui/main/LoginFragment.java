@@ -10,6 +10,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.example.sigaamobile.MainActivity;
 import com.example.sigaamobile.R;
 import com.example.sigaamobile.utils.JsonReader;
 
@@ -31,7 +32,7 @@ public class LoginFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        this.setNavBarButtons();
+        MainActivity.setNavBarButton(requireActivity(), R.id.btn_sair);
         AppCompatButton btnEntrar = view.findViewById(R.id.btn_entrar);
         this.username = view.findViewById(R.id.edit_text_usuario);
         this.password = view.findViewById(R.id.edit_text_senha);
@@ -41,13 +42,6 @@ public class LoginFragment extends Fragment {
             NavHostFragment.findNavController(LoginFragment.this).navigate(R.id.fragment_menu);
         });
     }
-
-    private void setNavBarButtons(){
-        requireActivity().findViewById(R.id.btn_main_menu).setVisibility(View.INVISIBLE);
-        requireActivity().findViewById(R.id.btn_voltar).setVisibility(View.INVISIBLE);
-        requireActivity().findViewById(R.id.btn_sair).setVisibility(View.VISIBLE);
-    }
-
     private void validarLogin(String username, String password){
         JSONObject json = JsonReader.read("sampledata/user.json");
         System.out.println(json);

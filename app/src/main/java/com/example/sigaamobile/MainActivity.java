@@ -1,13 +1,10 @@
 package com.example.sigaamobile;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.sigaamobile.ui.main.LoginFragment;
-import com.example.sigaamobile.ui.main.MenuFragment;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,5 +18,12 @@ public class MainActivity extends AppCompatActivity {
         int count = getSupportFragmentManager().getBackStackEntryCount();
         if (count == 0)
             super.onBackPressed();
+    }
+
+    public static void setNavBarButton(Activity activity, int btnId){
+        activity.findViewById(R.id.btn_main_menu).setVisibility(View.INVISIBLE);
+        activity.findViewById(R.id.btn_voltar).setVisibility(View.INVISIBLE);
+        activity.findViewById(R.id.btn_sair).setVisibility(View.INVISIBLE);
+        activity.findViewById(btnId).setVisibility(View.VISIBLE);
     }
 }

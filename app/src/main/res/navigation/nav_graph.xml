@@ -21,6 +21,15 @@
         android:name="com.example.sigaamobile.ui.main.MenuFragment"
         android:label="fragment_menu"
         tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_fragment_menu_to_notasFragment"
+            app:destination="@id/notasFragment"
+            app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/notasFragment"
+        android:name="com.example.sigaamobile.ui.main.NotasFragment"
+        android:label="fragment_notas"
+        tools:layout="@layout/fragment_notas" />
 
 </navigation>

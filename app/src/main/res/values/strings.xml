@@ -44,4 +44,6 @@
     <string name="teste_plus_plus">Texto de Teste Comprido Por Demais</string>
     <string name="teste_numero">8,0171</string>
     <string name="app_version">V1.0.0</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
