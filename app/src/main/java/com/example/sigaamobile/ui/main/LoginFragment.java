@@ -25,6 +25,8 @@ public class LoginFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        requireActivity().findViewById(R.id.btn_main_menu).setVisibility(View.INVISIBLE);
+        requireActivity().findViewById(R.id.btn_voltar).setVisibility(View.VISIBLE);
 
         AppCompatButton btnEntrar = view.findViewById(R.id.btn_entrar);
 
