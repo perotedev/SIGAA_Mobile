@@ -1,0 +1,21 @@
+package com.example.sigaamobile.models;
+
+import java.util.HashMap;
+import java.util.Map;
+import lombok.Data;
+
+@Data
+public class mUser {
+    private String username, password;
+    private int userId;
+
+    public mUser(){}
+
+    public Map<String, Object> toMap() {
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("username", this.username);
+        result.put("password", this.password);
+        result.put("userId", this.userId);
+        return result;
+    }
+}
