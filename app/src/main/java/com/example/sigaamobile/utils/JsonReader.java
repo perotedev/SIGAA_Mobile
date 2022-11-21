@@ -34,7 +34,7 @@ public class JsonReader {
     private String loadJSONFromAsset(String jsonFileName) {
         String json = null;
         try {
-            InputStream is = this.activity.getAssets().open(jsonFileName+".json");
+            InputStream is = this.activity.getAssets().open(jsonFileName);
             System.out.println("IS_ "+is);
             int size = is.available();
             byte[] buffer = new byte[size];

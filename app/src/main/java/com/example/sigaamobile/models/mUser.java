@@ -11,6 +11,11 @@ public class mUser {
 
     public mUser(){}
 
+    public mUser(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
     public Map<String, Object> toMap() {
         HashMap<String, Object> result = new HashMap<>();
         result.put("username", this.username);
