@@ -57,10 +57,10 @@ public class MenuFragment extends Fragment {
         cardInfo.setOnClickListener(v -> {
             if (arrowDown.getRotation() == 180){
                 showInfo(expContent,  0);
-                arrowDown.setRotation(0);
+                arrowDown.animate().rotation(0f).setDuration(300).start();
             } else {
                 showInfo(expContent, contentExpHeight);
-                arrowDown.setRotation(180);
+                arrowDown.animate().rotation(180f).setDuration(300).start();
             }
         });
     }
