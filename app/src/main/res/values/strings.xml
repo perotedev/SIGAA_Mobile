@@ -2,7 +2,6 @@
     <string name="app_name">SIGAA Mobile</string>
     <string name="sigla_app">SIGAA</string>
     <string name="type_app">Mobile</string>
-    <string name="menufragment">Fulano Ciclano de Beltrano</string>
 
     <!--  Tela de Login  -->
     <string name="usuario">Usuário</string>
@@ -12,6 +11,7 @@
     <string name="entrar">Entrar</string>
 
     <!--  Informações Gerais do Usuário  -->
+    <string name="nomeAluno">Fulano Ciclano de Beltrano</string>
     <string name="matricula">Matrícula:</string>
     <string name="mat_number">20195523654</string>
     <string name="curso">Curso:</string>
@@ -59,6 +59,9 @@
     <string name="desc_btn_voltar">Botão de Voltar</string>
     <string name="desc_btn_main_menu">Botão do Menu Lateral</string>
     <string name="desc_btn_sair">Botão de Sair do Aplicativo</string>
+    <string name="account_logo">Logo de Conta de Usuário</string>
+    <string name="account_logo_bg">Cor do fundo do logo de conta de usuário</string>
+    <string name="arrow_down">Icon Chevron Down</string>
 
     <!--  Texto pra Teste  -->
     <string name="teste">Texto de Teste</string>

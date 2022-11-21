@@ -1,5 +1,6 @@
 {
-  "dadosAcademicos": [
+  "comment": "Sample data structure of dadosAcademicosAluno",
+  "dadosAcademicosAlunos": [
     {
       "idAluno": 1,
       "idCurso": 1,

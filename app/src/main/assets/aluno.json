@@ -1,4 +1,5 @@
 {
+  "comment": "Sample data structure of aluno",
   "alunos": [
     {
       "idAluno": 1,

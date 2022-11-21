@@ -5,16 +5,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.sigaamobile.MainActivity;
 import com.example.sigaamobile.R;
 import com.example.sigaamobile.utils.JsonReader;
 
-import org.json.JSONObject;
+import org.json.JSONArray;
 
 public class LoginFragment extends Fragment {
     private EditText username, password;
@@ -39,11 +39,14 @@ public class LoginFragment extends Fragment {
 
         btnEntrar.setOnClickListener(v -> {
             this.validarLogin(this.username.getText().toString(), this.password.getText().toString());
-            NavHostFragment.findNavController(LoginFragment.this).navigate(R.id.fragment_menu);
+//            NavHostFragment.findNavController(LoginFragment.this).navigate(R.id.fragment_menu);
         });
     }
+
     private void validarLogin(String username, String password){
-        JSONObject json = JsonReader.read("sampledata/user.json");
-        System.out.println(json);
+        JsonReader jsonReader = new JsonReader(requireActivity());
+        JSONArray jsonArray = jsonReader.read("users", "user");
+        System.out.println(jsonArray);
+
     }
 }

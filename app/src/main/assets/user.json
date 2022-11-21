@@ -1,4 +1,5 @@
 {
+  "comment": "Sample data structure of user",
   "users": [
     {
       "username": "renato_barbosa",

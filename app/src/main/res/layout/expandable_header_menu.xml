@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/expandable_header_menu"
@@ -16,7 +14,8 @@
         app:layout_constraintStart_toStartOf="@id/imageViewExpandableHeader"
         app:layout_constraintTop_toTopOf="@id/imageViewExpandableHeader"
         app:srcCompat="@android:drawable/ic_notification_overlay"
-        app:tint="?colorOnPrimary" />
+        app:tint="?colorOnPrimary"
+        android:contentDescription="@string/account_logo_bg" />
 
     <ImageView
         android:id="@+id/imageViewExpandableHeader"
@@ -28,7 +27,8 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="15dp"
         app:srcCompat="@drawable/ic_baseline_account_circle_24"
-        app:tint="?colorAccent" />
+        app:tint="?colorAccent"
+        android:contentDescription="@string/account_logo" />
 
     <TextView
         android:id="@+id/textViewExpandableHeader1"
@@ -37,7 +37,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="50dp"
-        android:text="@string/menufragment"
+        android:text="@string/nomeAluno"
         app:layout_constraintBottom_toTopOf="@+id/textViewExpandableHeader2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageViewExpandableHeader"
@@ -75,5 +75,6 @@
         app:tint="?android:textColor"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/arrow_down" />
 </androidx.constraintlayout.widget.ConstraintLayout>
