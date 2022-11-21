@@ -1,5 +1,6 @@
 package com.example.sigaamobile.ui.main;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.cardview.widget.CardView;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
@@ -17,6 +18,22 @@ public class MenuFragment extends Fragment {
 
     public static MenuFragment newInstance() {
         return new MenuFragment();
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+//        // This callback will only be called when MyFragment is at least Started.
+//        OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
+//            @Override
+//            public void handleOnBackPressed() {
+//                // Handle the back button event
+//            }
+//        };
+//        requireActivity().getOnBackPressedDispatcher().addCallback(this, callback);
+//
+//        // The callback can be enabled or disabled here or in handleOnBackPressed()
     }
 
     @Nullable
