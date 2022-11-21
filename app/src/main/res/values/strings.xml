@@ -33,6 +33,8 @@
     <string name="atividades">Atividades</string>
     <string name="documentos">Documentos</string>
 
+    <!--  Descrições  -->
+    <string name="desc_btn_voltar">Botão de Voltar</string>
 
     <!--  Texto pra Teste  -->
     <string name="teste">Texto de Teste</string>
