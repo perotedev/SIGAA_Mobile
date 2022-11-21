@@ -22,11 +22,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class LoginFragment extends Fragment {
-    private EditText username, password;
-
-    public static LoginFragment newInstance() {
-        return new LoginFragment();
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,24 +34,29 @@ public class LoginFragment extends Fragment {
 
         MainActivity.setNavBarButton(requireActivity(), R.id.btn_sair);
         AppCompatButton btnEntrar = view.findViewById(R.id.btn_entrar);
-        this.username = view.findViewById(R.id.edit_text_usuario);
-        this.password = view.findViewById(R.id.edit_text_senha);
+        EditText username, password;
+        username = view.findViewById(R.id.edit_text_usuario);
+        password = view.findViewById(R.id.edit_text_senha);
 
         btnEntrar.setOnClickListener(v -> {
             boolean isUserValid = this.validarLogin(
-                    this.username.getText().toString(),
-                    this.password.getText().toString()
+                    username.getText().toString(),
+                    password.getText().toString()
             );
 
             if (isUserValid){
                 NavHostFragment.findNavController(LoginFragment.this).navigate(R.id.fragment_menu);
             } else {
-                Toast.makeText(getContext(), "Usuário ou Senha Inválidos!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(
+                        getContext(),
+                        requireActivity().getString(R.string.invalid_login_alert),
+                        Toast.LENGTH_SHORT)
+                        .show();
             }
         });
     }
 
-    private Boolean validarLogin(String username, String password){
+    private boolean validarLogin(String username, String password){
         boolean isUserValid = false;
         mUser mUser = new mUser();
         JsonReader jsonReader = new JsonReader(requireActivity());
