@@ -33,6 +33,369 @@
           "nota": -1
         }
       ]
+    },
+    {
+      "idAluno": 1,
+      "disciplinaId": 2,
+      "nomeDisciplina": "ZL - Desenho de Apresentação",
+      "situacao": "MATRICULADO",
+      "notas": [
+        {
+          "notaId": 6,
+          "undNota": "und1",
+          "nota": 9.8
+        },
+        {
+          "notaId": 7,
+          "undNota": "und2",
+          "nota": 9.3
+        },
+        {
+          "notaId": 8,
+          "undNota": "und3",
+          "nota": -1
+        },
+        {
+          "notaId": 9,
+          "undNota": "rep",
+          "nota": -1
+        },
+        {
+          "notaId": 10,
+          "undNota": "res",
+          "nota": -1
+        }
+      ]
+    },
+    {
+      "idAluno": 1,
+      "disciplinaId": 3,
+      "nomeDisciplina": "ZL - Informática",
+      "situacao": "MATRICULADO",
+      "notas": [
+        {
+          "notaId": 11,
+          "undNota": "und1",
+          "nota": 8.5
+        },
+        {
+          "notaId": 12,
+          "undNota": "und2",
+          "nota": 5.8
+        },
+        {
+          "notaId": 13,
+          "undNota": "und3",
+          "nota": -1
+        },
+        {
+          "notaId": 14,
+          "undNota": "rep",
+          "nota": -1
+        },
+        {
+          "notaId": 15,
+          "undNota": "res",
+          "nota": -1
+        }
+      ]
+    },
+    {
+      "idAluno": 1,
+      "disciplinaId": 4,
+      "nomeDisciplina": "ZL - História da Arte",
+      "situacao": "MATRICULADO",
+      "notas": [
+        {
+          "notaId": 16,
+          "undNota": "und1",
+          "nota": 8.9
+        },
+        {
+          "notaId": 17,
+          "undNota": "und2",
+          "nota": 8.1
+        },
+        {
+          "notaId": 18,
+          "undNota": "und3",
+          "nota": -1
+        },
+        {
+          "notaId": 19,
+          "undNota": "rep",
+          "nota": -1
+        },
+        {
+          "notaId": 20,
+          "undNota": "res",
+          "nota": -1
+        }
+      ]
+    },
+    {
+      "idAluno": 1,
+      "disciplinaId": 5,
+      "nomeDisciplina": "ZL - Português Instrumental",
+      "situacao": "MATRICULADO",
+      "notas": [
+        {
+          "notaId": 21,
+          "undNota": "und1",
+          "nota": 6.7
+        },
+        {
+          "notaId": 22,
+          "undNota": "und2",
+          "nota": 8.2
+        },
+        {
+          "notaId": 23,
+          "undNota": "und3",
+          "nota": -1
+        },
+        {
+          "notaId": 24,
+          "undNota": "rep",
+          "nota": -1
+        },
+        {
+          "notaId": 25,
+          "undNota": "res",
+          "nota": -1
+        }
+      ]
+    },
+    {
+      "idAluno": 1,
+      "disciplinaId": 6,
+      "nomeDisciplina": "ZL - Teoria e Prática de Jardinagem I",
+      "situacao": "MATRICULADO",
+      "notas": [
+        {
+          "notaId": 26,
+          "undNota": "und1",
+          "nota": 8.8
+        },
+        {
+          "notaId": 27,
+          "undNota": "und2",
+          "nota": 9.2
+        },
+        {
+          "notaId": 28,
+          "undNota": "und3",
+          "nota": -1
+        },
+        {
+          "notaId": 29,
+          "undNota": "rep",
+          "nota": -1
+        },
+        {
+          "notaId": 30,
+          "undNota": "res",
+          "nota": -1
+        }
+      ]
+    },
+    {
+      "idAluno": 2,
+      "disciplinaId": 1,
+      "nomeDisciplina": "ZL - Matemática Básica",
+      "situacao": "MATRICULADO",
+      "notas": [
+        {
+          "notaId": 31,
+          "undNota": "und1",
+          "nota": 9.7
+        },
+        {
+          "notaId": 32,
+          "undNota": "und2",
+          "nota": 7.8
+        },
+        {
+          "notaId": 33,
+          "undNota": "und3",
+          "nota": -1
+        },
+        {
+          "notaId": 34,
+          "undNota": "rep",
+          "nota": -1
+        },
+        {
+          "notaId": 35,
+          "undNota": "res",
+          "nota": -1
+        }
+      ]
+    },
+    {
+      "idAluno": 2,
+      "disciplinaId": 2,
+      "nomeDisciplina": "ZL - Desenho de Apresentação",
+      "situacao": "MATRICULADO",
+      "notas": [
+        {
+          "notaId": 36,
+          "undNota": "und1",
+          "nota": 8.3
+        },
+        {
+          "notaId": 37,
+          "undNota": "und2",
+          "nota": 9.3
+        },
+        {
+          "notaId": 38,
+          "undNota": "und3",
+          "nota": -1
+        },
+        {
+          "notaId": 39,
+          "undNota": "rep",
+          "nota": -1
+        },
+        {
+          "notaId": 40,
+          "undNota": "res",
+          "nota": -1
+        }
+      ]
+    },
+    {
+      "idAluno": 2,
+      "disciplinaId": 3,
+      "nomeDisciplina": "ZL - Informática",
+      "situacao": "MATRICULADO",
+      "notas": [
+        {
+          "notaId": 41,
+          "undNota": "und1",
+          "nota": 9.4
+        },
+        {
+          "notaId": 42,
+          "undNota": "und2",
+          "nota": 6.2
+        },
+        {
+          "notaId": 43,
+          "undNota": "und3",
+          "nota": -1
+        },
+        {
+          "notaId": 44,
+          "undNota": "rep",
+          "nota": -1
+        },
+        {
+          "notaId": 45,
+          "undNota": "res",
+          "nota": -1
+        }
+      ]
+    },
+    {
+      "idAluno": 2,
+      "disciplinaId": 4,
+      "nomeDisciplina": "ZL - História da Arte",
+      "situacao": "MATRICULADO",
+      "notas": [
+        {
+          "notaId": 46,
+          "undNota": "und1",
+          "nota": 9.8
+        },
+        {
+          "notaId": 47,
+          "undNota": "und2",
+          "nota": 8.1
+        },
+        {
+          "notaId": 48,
+          "undNota": "und3",
+          "nota": -1
+        },
+        {
+          "notaId": 49,
+          "undNota": "rep",
+          "nota": -1
+        },
+        {
+          "notaId": 50,
+          "undNota": "res",
+          "nota": -1
+        }
+      ]
+    },
+    {
+      "idAluno": 2,
+      "disciplinaId": 5,
+      "nomeDisciplina": "ZL - Português Instrumental",
+      "situacao": "MATRICULADO",
+      "notas": [
+        {
+          "notaId": 51,
+          "undNota": "und1",
+          "nota": 6.1
+        },
+        {
+          "notaId": 52,
+          "undNota": "und2",
+          "nota": 5.6
+        },
+        {
+          "notaId": 53,
+          "undNota": "und3",
+          "nota": -1
+        },
+        {
+          "notaId": 54,
+          "undNota": "rep",
+          "nota": -1
+        },
+        {
+          "notaId": 55,
+          "undNota": "res",
+          "nota": -1
+        }
+      ]
+    },
+    {
+      "idAluno": 2,
+      "disciplinaId": 6,
+      "nomeDisciplina": "ZL - Teoria e Prática de Jardinagem I",
+      "situacao": "MATRICULADO",
+      "notas": [
+        {
+          "notaId": 56,
+          "undNota": "und1",
+          "nota": 8.9
+        },
+        {
+          "notaId": 57,
+          "undNota": "und2",
+          "nota": 9.9
+        },
+        {
+          "notaId": 58,
+          "undNota": "und3",
+          "nota": -1
+        },
+        {
+          "notaId": 59,
+          "undNota": "rep",
+          "nota": -1
+        },
+        {
+          "notaId": 60,
+          "undNota": "res",
+          "nota": -1
+        }
+      ]
     }
   ]
 }
