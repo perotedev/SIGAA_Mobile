@@ -1,10 +1,12 @@
 package com.example.sigaamobile.ui.main;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -16,10 +18,11 @@ import com.example.sigaamobile.MainActivity;
 import com.example.sigaamobile.R;
 import com.example.sigaamobile.models.mUser;
 import com.example.sigaamobile.utils.JsonReader;
+import com.example.sigaamobile.utils.SigaaSharedPreferences;
+import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 public class LoginFragment extends Fragment {
 
@@ -45,7 +48,11 @@ public class LoginFragment extends Fragment {
             );
 
             if (isUserValid){
-                NavHostFragment.findNavController(LoginFragment.this).navigate(R.id.fragment_menu);
+                username.setText("");
+                password.setText("");
+
+                view.findViewById(R.id.login_loader).setVisibility(View.VISIBLE);
+                this.animateAndNavigateToMenu();
             } else {
                 Toast.makeText(
                         getContext(),
@@ -58,26 +65,41 @@ public class LoginFragment extends Fragment {
 
     private boolean validarLogin(String username, String password){
         boolean isUserValid = false;
-        mUser mUser = new mUser();
         JsonReader jsonReader = new JsonReader(requireActivity());
         JSONArray jsonArray = jsonReader.read("users", "user.json");
 
         for (int index = 0; index < jsonArray.length(); index ++){
-            JSONObject object = null;
+            mUser mUser = new mUser();
+
             try {
-                object = (JSONObject) jsonArray.get(index);
-                mUser.setUsername(object.getString("username"));
-                mUser.setPassword(object.getString("password"));
+                Gson gson = new Gson();
+                mUser = gson.fromJson(jsonArray.get(index).toString(), mUser.class);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            assert object != null;
 
             if (mUser.getUsername().equals(username) && mUser.getPassword().equals(password)){
+                SigaaSharedPreferences preferences = new SigaaSharedPreferences(requireActivity());
+                preferences.setInt("userId", mUser.getUserId());
+
                 isUserValid = true;
                 break;
             }
         }
         return isUserValid;
+    }
+
+    private void animateAndNavigateToMenu(){
+        ImageView logoSigaa = requireActivity().findViewById(R.id.logo_sigaa_loader);
+        logoSigaa.animate().rotation(820f).setDuration(2200).start();
+
+        // Não é válido para aplicação em uso real, estou apenas simulando o delay da consumo de API de login
+        Handler handler = new Handler();
+        handler.postDelayed(this::navigateToMenu, 2000);
+    }
+
+    private void navigateToMenu(){
+        NavHostFragment.findNavController(LoginFragment.this).navigate(R.id.fragment_menu);
+        requireActivity().findViewById(R.id.login_loader).setVisibility(View.INVISIBLE);
     }
 }

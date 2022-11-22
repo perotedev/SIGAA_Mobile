@@ -18,7 +18,6 @@ import com.example.sigaamobile.R;
 import com.example.sigaamobile.utils.AnimateChangeHeight;
 
 public class MenuFragment extends Fragment {
-
     public static MenuFragment newInstance() {
         return new MenuFragment();
     }
@@ -50,6 +49,7 @@ public class MenuFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         MainActivity.setNavBarButton(requireActivity(), R.id.btn_main_menu);
+
         ImageView arrowDown = view.findViewById(R.id.arrow_down);
         RelativeLayout expContent = view.findViewById(R.id.frame_exp_content);
         CardView cardInfo = view.findViewById(R.id.card_menu_general_info);
