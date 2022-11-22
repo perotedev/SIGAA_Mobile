@@ -53,8 +53,8 @@
     <!--  Tela Frequência  -->
     <string name="data_aula">Data</string>
     <string name="situacao_frequencia">Situação</string>
-    <string name="frequencia_aluno">Frequência</string>
-    <string name="aulas_ministradas">Aulas Ministradas</string>
+    <string name="frequencia_aluno">Frequência:</string>
+    <string name="aulas_ministradas">Aulas Ministradas:</string>
 
     <!--  Descrições  -->
     <string name="sigaa_logo">Logo do SIGAA</string>
@@ -71,6 +71,7 @@
     <string name="teste_plus_plus">Texto de Teste Comprido Por Demais</string>
     <string name="teste_numero">8,0171</string>
     <string name="teste_nota">8,5</string>
+    <string name="teste_porcentagem">82%</string>
     <string name="app_version">V1.0.0</string>
 
     <!--  Alertas  -->

@@ -24,13 +24,13 @@
                 android:id="@+id/title_card_nota"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/teste_plus_plus"
-                android:textStyle="bold"
-                android:textColor="?colorOnPrimary"
+                android:layout_centerInParent="true"
                 android:paddingHorizontal="15dp"
                 android:paddingVertical="8dp"
+                android:text="@string/teste_plus_plus"
+                android:textColor="?colorOnPrimary"
                 android:textSize="15sp"
-                android:layout_centerInParent="true"/>
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout

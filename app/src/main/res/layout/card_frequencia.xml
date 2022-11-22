@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:id="@+id/card_frequencia"
+    android:elevation="2dp"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relative_frequencia_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?colorAccent"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/teste_plus_plus"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:textColor="?colorOnPrimary"/>
+
+                <ImageView
+                    android:id="@+id/arrow_down_frequencia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow_down"
+                    app:tint="?colorOnPrimary"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/arrow_down" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@+id/relative_frequencia_title"
+                android:id="@+id/relative_frequencia_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_below="@+id/relative_frequencia_content"
+                android:id="@+id/relative_frequencia_resumo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:background="?colorSecondary">
+
+                <TextView
+                    android:id="@+id/frequencia_aluno_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="@string/frequencia_aluno"
+                    android:textStyle="bold"
+                />
+
+                <TextView
+                    android:id="@+id/frequencia_aluno_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    app:layout_constraintStart_toEndOf="@+id/frequencia_aluno_title"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="@string/teste_numero"
+                />
+
+                <TextView
+                    android:id="@+id/frequencia_aulas_ministradas_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frequencia_aluno_title"
+                    android:text="@string/aulas_ministradas"
+                    android:textStyle="bold"
+                />
+
+                <TextView
+                    android:id="@+id/frequencia_aulas_minsitradas_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    app:layout_constraintStart_toEndOf="@+id/frequencia_aulas_ministradas_title"
+                    app:layout_constraintTop_toTopOf="@id/frequencia_aulas_ministradas_title"
+                    app:layout_constraintEnd_toStartOf="@+id/porcentagem_aluno_value"
+                    android:text="@string/teste_numero"
+                />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/divider1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:rotation="90"
+                    app:layout_constraintStart_toEndOf="@+id/frequencia_aulas_minsitradas_value"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/porcentagem_aluno_value"/>
+
+                <TextView
+                    android:id="@+id/porcentagem_aluno_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/teste_porcentagem"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
