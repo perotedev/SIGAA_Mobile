@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,9 +16,16 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.sigaamobile.MainActivity;
 import com.example.sigaamobile.R;
+import com.example.sigaamobile.models.mAluno;
+import com.example.sigaamobile.models.mDadosAcademicos;
 import com.example.sigaamobile.utils.AnimateChangeHeight;
+import com.example.sigaamobile.utils.GetClassFromJson;
+import com.example.sigaamobile.utils.SigaaSharedPreferences;
 
 public class MenuFragment extends Fragment {
+    private mAluno mAluno = new mAluno();
+    private mDadosAcademicos mDadosAcademicos = new mDadosAcademicos();
+
     public static MenuFragment newInstance() {
         return new MenuFragment();
     }
@@ -47,8 +55,13 @@ public class MenuFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         MainActivity.setNavBarButton(requireActivity(), R.id.btn_main_menu);
+
+        SigaaSharedPreferences preferences = new SigaaSharedPreferences(requireContext());
+        this.mAluno = GetClassFromJson.getmAluno(preferences.getInt("userId"), requireActivity());
+//        this.mDadosAcademicos = GetClassFromJson.getmDadosAcademicos(mAluno.getIdAluno(), requireActivity());
+        this.setDadosBasicos(view);
+        this.setDadosAcademicos(view);
 
         ImageView arrowDown = view.findViewById(R.id.arrow_down);
         RelativeLayout expContent = view.findViewById(R.id.frame_exp_content);
@@ -110,5 +123,16 @@ public class MenuFragment extends Fragment {
         expContent.setLayoutParams(params);
         expContent.setVisibility(View.VISIBLE);
         return height;
+    }
+
+    private void setDadosBasicos(View view) {
+        TextView nomeAluno = view.findViewById(R.id.textViewExpandableHeader1);
+        TextView matriculaAluno = view.findViewById(R.id.textViewExpandableHeader3);
+        nomeAluno.setText(this.mAluno.getNomeAluno());
+        matriculaAluno.setText(this.mAluno.getMatricula());
+    }
+
+    private void setDadosAcademicos(View view) {
+
     }
 }

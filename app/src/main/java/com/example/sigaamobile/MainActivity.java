@@ -6,6 +6,8 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.sigaamobile.utils.SigaaSharedPreferences;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -25,5 +27,12 @@ public class MainActivity extends AppCompatActivity {
         activity.findViewById(R.id.btn_voltar).setVisibility(View.INVISIBLE);
         activity.findViewById(R.id.btn_sair).setVisibility(View.INVISIBLE);
         activity.findViewById(btnId).setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        SigaaSharedPreferences.clearSharedPreferences(getApplicationContext());
     }
 }

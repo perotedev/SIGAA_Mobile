@@ -1,18 +1,20 @@
 package com.example.sigaamobile.utils;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 
 public class SigaaSharedPreferences {
-    private SharedPreferences sharedPreferences;
+    private final SharedPreferences sharedPreferences;
     private final SharedPreferences.Editor editor;
     private static final String PREFERENCES_NAME = "SIGAA";
 
-    public SigaaSharedPreferences(Activity activity){
-        SharedPreferences sharedpreferences = activity.getSharedPreferences(PREFERENCES_NAME, Context.MODE_PRIVATE);
-        this.editor = sharedpreferences.edit();
+    public SigaaSharedPreferences(Context context){
+        this.sharedPreferences = context.getSharedPreferences(
+                SigaaSharedPreferences.PREFERENCES_NAME,
+                Context.MODE_PRIVATE
+        );
+        this.editor = sharedPreferences.edit();
     }
 
     public void setString(String nomeAtributo, String value){
@@ -34,8 +36,11 @@ public class SigaaSharedPreferences {
     }
 
     @SuppressLint("CommitPrefEdits")
-    public static void clearSharedPreferences(Activity activity){
-        SharedPreferences sharedpreferences = activity.getSharedPreferences(PREFERENCES_NAME, Context.MODE_PRIVATE);
+    public static void clearSharedPreferences(Context context){
+        SharedPreferences sharedpreferences = context.getSharedPreferences(
+                SigaaSharedPreferences.PREFERENCES_NAME,
+                Context.MODE_PRIVATE
+        );
         sharedpreferences.edit().clear();
         sharedpreferences.edit().apply();
     }

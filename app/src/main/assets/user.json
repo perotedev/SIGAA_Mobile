@@ -2,7 +2,7 @@
   "comment": "Sample data structure of user",
   "users": [
     {
-      "username": "renato_barbosa",
+      "username": "roberto_barbosa",
       "password": "12345678",
       "token": "@$df7dFG&DW9uhueoeuh9$Oe&&65RFSvudwe",
       "userId": 32

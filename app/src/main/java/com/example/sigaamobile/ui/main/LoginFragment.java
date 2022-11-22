@@ -79,7 +79,7 @@ public class LoginFragment extends Fragment {
             }
 
             if (mUser.getUsername().equals(username) && mUser.getPassword().equals(password)){
-                SigaaSharedPreferences preferences = new SigaaSharedPreferences(requireActivity());
+                SigaaSharedPreferences preferences = new SigaaSharedPreferences(requireContext());
                 preferences.setInt("userId", mUser.getUserId());
 
                 isUserValid = true;
