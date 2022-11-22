@@ -5,6 +5,7 @@ import android.app.Activity;
 import com.example.sigaamobile.models.mAluno;
 import com.example.sigaamobile.models.mCurso;
 import com.example.sigaamobile.models.mDadosAcademicos;
+import com.example.sigaamobile.models.mDocumento;
 import com.example.sigaamobile.models.mNotasDisciplina;
 import com.google.gson.Gson;
 
@@ -92,5 +93,23 @@ public class FromJson {
             }
         }
         return arrayNotasDisciplinas;
+    }
+
+    public static ArrayList<mDocumento> getmDocumentos(Activity activity) {
+        ArrayList<mDocumento> arraymDocumentos = new ArrayList<>();
+        JsonReader jsonReader = new JsonReader(activity);
+        JSONArray jsonArray = jsonReader.read("documentos", "documentos.json");
+
+        for (int index = 0; index < jsonArray.length(); index ++){
+            mDocumento mDocumento;
+            try {
+                Gson gson = new Gson();
+                mDocumento = gson.fromJson(jsonArray.get(index).toString(), mDocumento.class);
+                arraymDocumentos.add(mDocumento);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        return arraymDocumentos;
     }
 }

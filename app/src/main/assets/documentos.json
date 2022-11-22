@@ -1,0 +1,20 @@
+{
+  "comment": "Sample data structure of documentos",
+  "documentos": [
+    {
+      "nomeDocumento": "Histórico Escolar",
+      "descricao": "Emita seu histórico acadêmico contendo as notas de todas as disciplinas que cursou desde que iniciou o curso.",
+      "link": ""
+    },
+    {
+      "nomeDocumento": "Declaração de Vínculo",
+      "descricao": "Emita a declaração de vínculo para devidos fins, inclusive meia entrada em cinemas e eventos esportivos.",
+      "link": ""
+    },
+    {
+      "nomeDocumento": "Atestado de Matrícula",
+      "descricao": "Emita o atestado de matrícula contendo as disciplinas em que você está matriculado neste semestre.",
+      "link": ""
+    }
+  ]
+}

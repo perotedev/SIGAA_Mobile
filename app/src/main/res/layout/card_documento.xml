@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?colorOnBackground"
+        android:minHeight="100dp"
         android:padding="15dp">
 
         <TextView
@@ -23,6 +24,7 @@
             android:textStyle="bold"
             android:textColor="?colorAccent"
             app:layout_constraintTop_toTopOf="parent"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/desc_doc"/>
 

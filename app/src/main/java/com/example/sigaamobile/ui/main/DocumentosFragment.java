@@ -7,9 +7,16 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sigaamobile.MainActivity;
 import com.example.sigaamobile.R;
+import com.example.sigaamobile.models.mDocumento;
+import com.example.sigaamobile.ui.adapter.DocumentosAdapter;
+import com.example.sigaamobile.utils.FromJson;
+
+import java.util.ArrayList;
 
 public class DocumentosFragment extends Fragment {
 
@@ -29,5 +36,18 @@ public class DocumentosFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         MainActivity.setNavBarButton(requireActivity(), R.id.btn_voltar);
+        MainActivity.setNavBarTitle(requireActivity(), R.string.documentos_view_title);
+
+        RecyclerView listagemDocumentos = view.findViewById(R.id.recycler_view_documentos);
+        ArrayList<mDocumento> arraymDocumentos = FromJson.getmDocumentos(requireActivity());
+
+        listagemDocumentos.setAdapter(
+                new DocumentosAdapter(
+                        arraymDocumentos,
+                        requireContext()
+                )
+        );
+        LinearLayoutManager layoutManager = new LinearLayoutManager(requireContext());
+        listagemDocumentos.setLayoutManager(layoutManager);
     }
 }

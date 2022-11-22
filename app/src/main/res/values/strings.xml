@@ -42,6 +42,7 @@
     <string name="res">RES</string>
 
     <!--  Tela Documentos  -->
+    <string name="documentos_view_title">Documentos</string>
     <string name="doc_historico">Histórico Escolar</string>
     <string name="desc_doc_historico">Emita seu histórico acadêmico contendo as notas de todas as disciplinas que cursou.</string>
     <string name="doc_declaracao">Declaração de Vínculo</string>
