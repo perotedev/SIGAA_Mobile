@@ -1,0 +1,38 @@
+{
+  "comment": "Sample data structure of notasDisciplina",
+  "notasDisciplina": [
+    {
+      "idAluno": 1,
+      "disciplinaId": 1,
+      "nomeDisciplina": "ZL - Matemática Básica",
+      "situacao": "MATRICULADO",
+      "notas": [
+        {
+          "notaId": 1,
+          "undNota": "und1",
+          "nota": 8.7
+        },
+        {
+          "notaId": 2,
+          "undNota": "und2",
+          "nota": -1
+        },
+        {
+          "notaId": 3,
+          "undNota": "und3",
+          "nota": -1
+        },
+        {
+          "notaId": 4,
+          "undNota": "rep",
+          "nota": -1
+        },
+        {
+          "notaId": 5,
+          "undNota": "res",
+          "nota": -1
+        }
+      ]
+    }
+  ]
+}

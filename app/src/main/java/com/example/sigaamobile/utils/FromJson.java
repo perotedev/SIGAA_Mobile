@@ -1,13 +1,19 @@
 package com.example.sigaamobile.utils;
 
 import android.app.Activity;
+
 import com.example.sigaamobile.models.mAluno;
+import com.example.sigaamobile.models.mCurso;
 import com.example.sigaamobile.models.mDadosAcademicos;
+import com.example.sigaamobile.models.mNotasDisciplina;
 import com.google.gson.Gson;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 
-public class GetClassFromJson {
+import java.util.ArrayList;
+
+public class FromJson {
     public static mAluno getmAluno(int idUser, Activity activity) {
         mAluno mAluno = new mAluno();
         JsonReader jsonReader = new JsonReader(activity);
@@ -46,5 +52,45 @@ public class GetClassFromJson {
             }
         }
         return mDadosAcademicos;
+    }
+
+    public static mCurso getmCurso(int idCurso, Activity activity) {
+        mCurso mCurso = new mCurso();
+        JsonReader jsonReader = new JsonReader(activity);
+        JSONArray jsonArray = jsonReader.read("cursos", "curso.json");
+
+        for (int index = 0; index < jsonArray.length(); index ++){
+            try {
+                Gson gson = new Gson();
+                mCurso = gson.fromJson(jsonArray.get(index).toString(), mCurso.class);
+
+                if (mCurso.getIdCurso() == idCurso){
+                    break;
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        return mCurso;
+    }
+
+    public static ArrayList<mNotasDisciplina> getmNotasDisciplina(int idAluno, Activity activity) {
+        ArrayList<mNotasDisciplina> arrayNotasDisciplinas = new ArrayList<>();
+        JsonReader jsonReader = new JsonReader(activity);
+        JSONArray jsonArray = jsonReader.read("notasDisciplina", "notasDisciplina.json");
+
+        for (int index = 0; index < jsonArray.length(); index ++){
+            mNotasDisciplina mNotasDisciplina;
+            try {
+                Gson gson = new Gson();
+                mNotasDisciplina = gson.fromJson(jsonArray.get(index).toString(), mNotasDisciplina.class);
+                if (mNotasDisciplina.getIdAluno() == idAluno){
+                    arrayNotasDisciplinas.add(mNotasDisciplina);
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        return arrayNotasDisciplinas;
     }
 }

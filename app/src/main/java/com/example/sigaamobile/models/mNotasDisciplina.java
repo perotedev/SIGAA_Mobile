@@ -5,8 +5,8 @@ import lombok.Data;
 
 @Data
 public class mNotasDisciplina {
-    private ArrayList<Integer> notasIds;
-    private int disciplinaId;
+    private ArrayList<mNota> notas;
+    private int disciplinaId, idAluno;
     private String nomeDisciplina, situacao;
 
     public mNotasDisciplina(){}

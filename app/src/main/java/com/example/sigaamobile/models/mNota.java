@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class mNota {
-    private String tipoNota, undNota;
+    private String undNota;
     private float nota;
     private int notaId;
 

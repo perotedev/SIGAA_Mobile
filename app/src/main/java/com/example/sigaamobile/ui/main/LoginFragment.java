@@ -95,7 +95,7 @@ public class LoginFragment extends Fragment {
 
         // Não é válido para aplicação em uso real, estou apenas simulando o delay da consumo de API de login
         Handler handler = new Handler();
-        handler.postDelayed(this::navigateToMenu, 2000);
+        handler.postDelayed(this::navigateToMenu, 1800);
     }
 
     private void navigateToMenu(){

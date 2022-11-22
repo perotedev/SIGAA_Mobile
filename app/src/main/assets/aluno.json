@@ -6,7 +6,7 @@
       "idUser": 32,
       "idCurso": 1,
       "statusAluno": 1,
-      "dataEntrada": 1558425944,
+      "dataEntrada": "2019.2",
       "nomeAluno": "Roberto Olibeira Barbosa",
       "email": "roberto.barbosa@ifam.edu.br",
       "matricula": "2019056774"
@@ -16,7 +16,7 @@
       "idUser": 33,
       "idCurso": 1,
       "statusAluno": 1,
-      "dataEntrada": 1558425944,
+      "dataEntrada": "2019.1",
       "nomeAluno": "Renata Pinheiro Campos",
       "email": "renata.campos@ifam.edu.br",
       "matricula": "2019057789"

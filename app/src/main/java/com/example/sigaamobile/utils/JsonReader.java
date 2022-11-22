@@ -12,7 +12,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Objects;
 
 public class JsonReader {
-    private Activity activity;
+    private final Activity activity;
 
     public JsonReader (Activity activity){
         this.activity = activity;
@@ -32,7 +32,7 @@ public class JsonReader {
     }
 
     private String loadJSONFromAsset(String jsonFileName) {
-        String json = null;
+        String json;
         try {
             InputStream is = this.activity.getAssets().open(jsonFileName);
             System.out.println("IS_ "+is);
