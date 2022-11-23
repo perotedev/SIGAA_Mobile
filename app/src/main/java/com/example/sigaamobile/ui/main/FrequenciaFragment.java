@@ -30,5 +30,7 @@ public class FrequenciaFragment extends Fragment {
 
         MainActivity.setNavBarButton(requireActivity(), R.id.btn_voltar);
         MainActivity.setNavBarTitle(requireActivity(), R.string.frequencia);
+
+
     }
 }

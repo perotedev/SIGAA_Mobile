@@ -1,0 +1,51 @@
+{
+  "comment": "Sample data structure of user",
+  "frequenciaDisciplina": [
+    {
+      "idFrequencia": 1,
+      "idAluno": 1,
+      "nomeDisciplina": "ZL - Matemárica Básica",
+      "frequencia": 10,
+      "aulasMinistradas": 12,
+      "percentualFrequencia": 83.3,
+      "frequenciasAulas": [
+        {
+          "frequenciaId": 1,
+          "dataAula": 1662699050,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 2,
+          "dataAula": 1662785450,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 3,
+          "dataAula": 1663303850,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 4,
+          "dataAula": 1663390250,
+          "qtdPresencas": 0,
+          "qtdFaltas": 2
+        },
+        {
+          "frequenciaId": 5,
+          "dataAula": 1663908650,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 6,
+          "dataAula": 1663995050,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        }
+      ]
+    }
+  ]
+}
