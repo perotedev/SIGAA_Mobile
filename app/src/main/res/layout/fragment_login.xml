@@ -114,10 +114,22 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:background="@drawable/edit_text_bg"
             android:paddingVertical="5dp"
-            android:paddingHorizontal="15dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="30dp"
             android:minHeight="45dp"
             android:inputType="textPassword"
             android:autofillHints="password" />
+
+        <ImageView
+            android:id="@+id/icone_olho_senha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/eye_icon"
+            android:layout_marginEnd="15dp"
+            app:tint="?colorAccent"
+            app:layout_constraintEnd_toEndOf="@id/edit_text_senha"
+            app:layout_constraintTop_toTopOf="@+id/edit_text_senha"
+            app:layout_constraintBottom_toBottomOf="@+id/edit_text_senha"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_entrar"

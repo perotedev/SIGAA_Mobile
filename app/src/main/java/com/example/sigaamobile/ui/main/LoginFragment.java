@@ -2,6 +2,8 @@ package com.example.sigaamobile.ui.main;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +27,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 public class LoginFragment extends Fragment {
+    private boolean showPassoword = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,6 +40,7 @@ public class LoginFragment extends Fragment {
 
         MainActivity.setNavBarButton(requireActivity(), R.id.btn_sair);
         AppCompatButton btnEntrar = view.findViewById(R.id.btn_entrar);
+        ImageView btnOlho = view.findViewById(R.id.icone_olho_senha);
         EditText username, password;
         username = view.findViewById(R.id.edit_text_usuario);
         password = view.findViewById(R.id.edit_text_senha);
@@ -59,6 +63,16 @@ public class LoginFragment extends Fragment {
                         requireActivity().getString(R.string.invalid_login_alert),
                         Toast.LENGTH_SHORT)
                         .show();
+            }
+        });
+
+        btnOlho.setOnClickListener(v -> {
+            this.showPassoword = !this.showPassoword;
+            System.out.println("inputType "+password.getInputType());
+            if (this.showPassoword){
+                password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+            } else {
+                password.setTransformationMethod(PasswordTransformationMethod.getInstance());
             }
         });
     }
