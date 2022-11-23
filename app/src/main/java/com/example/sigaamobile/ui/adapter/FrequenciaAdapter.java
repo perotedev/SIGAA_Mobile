@@ -48,7 +48,12 @@ public class FrequenciaAdapter extends RecyclerView.Adapter<FrequenciaAdapter.Fr
         TextView frequencia_aluno_value = holder.itemView.findViewById(R.id.frequencia_aluno_value);
         TextView frequencia_aulas_minsitradas_value = holder.itemView.findViewById(R.id.frequencia_aulas_minsitradas_value);
         TextView porcentagem = holder.itemView.findViewById(R.id.porcentagem_aluno_value);
-        String porcentagemFrequencia = mFrequenciaTodasAulas.getPercentualFrequencia()+"%";
+        String porcentagemFrequencia = String.valueOf(mFrequenciaTodasAulas.getPercentualFrequencia());
+
+        if (porcentagemFrequencia.contains(".0")){
+            porcentagemFrequencia = porcentagemFrequencia.split("\\.")[0];
+        }
+        porcentagemFrequencia = porcentagemFrequencia+"%";
 
         if (mFrequenciaTodasAulas.getPercentualFrequencia() < 60){
             porcentagem.setTextColor(ContextCompat.getColor(context, R.color.bgError));
