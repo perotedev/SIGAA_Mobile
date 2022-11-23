@@ -47,8 +47,7 @@
             android:id="@+id/relative_atividades_content"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="?colorOnBackground"
-            android:paddingHorizontal="15dp">
+            android:background="?colorOnBackground">
 
             <ListView
                 android:id="@+id/list_view_aulas"
