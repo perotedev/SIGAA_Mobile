@@ -6,6 +6,7 @@ import com.example.sigaamobile.models.mAluno;
 import com.example.sigaamobile.models.mCurso;
 import com.example.sigaamobile.models.mDadosAcademicos;
 import com.example.sigaamobile.models.mDocumento;
+import com.example.sigaamobile.models.mFrequenciaTodasAulas;
 import com.example.sigaamobile.models.mNotasDisciplina;
 import com.google.gson.Gson;
 
@@ -111,5 +112,25 @@ public class FromJson {
             }
         }
         return arraymDocumentos;
+    }
+
+    public static ArrayList<mFrequenciaTodasAulas> getmFrequenciaTodasAulas(int idAluno, Activity activity) {
+        ArrayList<mFrequenciaTodasAulas> arraymFrequenciaTodasAulas = new ArrayList<>();
+        JsonReader jsonReader = new JsonReader(activity);
+        JSONArray jsonArray = jsonReader.read("frequencias", "frequenciaDisciplina.json");
+
+        for (int index = 0; index < jsonArray.length(); index ++){
+            mFrequenciaTodasAulas mFrequenciaTodasAulas;
+            try {
+                Gson gson = new Gson();
+                mFrequenciaTodasAulas = gson.fromJson(jsonArray.get(index).toString(), mFrequenciaTodasAulas.class);
+                if (mFrequenciaTodasAulas.getIdAluno() == idAluno){
+                    arraymFrequenciaTodasAulas.add(mFrequenciaTodasAulas);
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        return arraymFrequenciaTodasAulas;
     }
 }

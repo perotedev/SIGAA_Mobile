@@ -1,6 +1,6 @@
 {
   "comment": "Sample data structure of user",
-  "frequenciaDisciplina": [
+  "frequencias": [
     {
       "idFrequencia": 1,
       "idAluno": 1,
