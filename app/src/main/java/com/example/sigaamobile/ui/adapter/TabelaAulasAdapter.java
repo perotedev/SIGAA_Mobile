@@ -4,40 +4,44 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.annotation.Nullable;
+
 import com.example.sigaamobile.R;
 import com.example.sigaamobile.models.mFrequenciaAula;
 import com.example.sigaamobile.utils.DateTransform;
+
 import java.util.List;
 
-public class TabelaAulasAdapter extends RecyclerView.Adapter<TabelaAulasAdapter.TabelaAulasHolder> {
+public class TabelaAulasAdapter extends ArrayAdapter<mFrequenciaAula> {
     private final List<mFrequenciaAula> listaFrequencia;
     private final Context context;
 
     public TabelaAulasAdapter(List<mFrequenciaAula> listaFrequencia, Context context) {
+        super(context, R.layout.card_item_aula, listaFrequencia);
         this.listaFrequencia = listaFrequencia;
         this.context = context;
     }
 
     @NonNull
     @Override
-    public TabelaAulasHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.card_item_aula, parent, false);
-        return new TabelaAulasHolder(view);
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull TabelaAulasHolder holder, int position) {
+    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         mFrequenciaAula mFrequenciaAula = this.listaFrequencia.get(position);
+        View view = convertView;
 
-        if (position%2 != 0){
-            holder.itemView.setBackgroundResource(R.color.white_transparent);
+        if (view == null) {
+            view = LayoutInflater.from(this.context).inflate(
+                    R.layout.card_item_aula,
+                    parent,
+                    false
+            );
         }
 
-        TextView data = holder.itemView.findViewById(R.id.data_aula);
-        TextView situacao = holder.itemView.findViewById(R.id.situacao_na_aula);
+        TextView data = view.findViewById(R.id.data_aula);
+        TextView situacao = view.findViewById(R.id.situacao_na_aula);
         String situacaoAula = "Presente";
 
         if (mFrequenciaAula.getQtdFaltas() > 0){
@@ -46,17 +50,7 @@ public class TabelaAulasAdapter extends RecyclerView.Adapter<TabelaAulasAdapter.
 
         data.setText(DateTransform.transformToStringDate(mFrequenciaAula.getDataAula()));
         situacao.setText(situacaoAula);
-    }
 
-    @Override
-    public int getItemCount() {
-        return this.listaFrequencia.size();
-    }
-
-
-    public static class TabelaAulasHolder extends RecyclerView.ViewHolder{
-        public TabelaAulasHolder(@NonNull View itemView){
-            super(itemView);
-        }
+        return view;
     }
 }

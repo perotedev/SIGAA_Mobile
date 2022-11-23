@@ -196,14 +196,14 @@
         {
           "frequenciaId": 25,
           "dataAula": 1663390250,
-          "qtdPresencas": 0,
-          "qtdFaltas": 1
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
         },
         {
           "frequenciaId": 26,
           "dataAula": 1663908650,
           "qtdPresencas": 2,
-          "qtdFaltas": 1
+          "qtdFaltas": 0
         }
       ]
     },
@@ -236,14 +236,14 @@
         {
           "frequenciaId": 30,
           "dataAula": 1663390250,
-          "qtdPresencas": 0,
-          "qtdFaltas": 1
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
         },
         {
           "frequenciaId": 31,
           "dataAula": 1663908650,
           "qtdPresencas": 2,
-          "qtdFaltas": 1
+          "qtdFaltas": 0
         }
       ]
     }

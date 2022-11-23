@@ -74,13 +74,12 @@
                     android:textStyle="bold"
                 />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_view_aulas"
+                <ListView
+                    android:id="@+id/list_view_aulas"
                     android:layout_below="@+id/data_aula_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:listitem="@layout/card_item_aula"/>
-
             </RelativeLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
