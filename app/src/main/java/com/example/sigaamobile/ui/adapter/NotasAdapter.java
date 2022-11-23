@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sigaamobile.R;
@@ -47,11 +48,11 @@ public class NotasAdapter extends RecyclerView.Adapter<NotasAdapter.NotasHolder>
         content_res = holder.itemView.findViewById(R.id.content_res);
 
         title_card_nota.setText(mNotasDisciplina.getNomeDisciplina());
-        content_nota1.setText(this.getUndNota("und1", notas));
-        content_nota2.setText(this.getUndNota("und2", notas));
-        content_nota3.setText(this.getUndNota("und3", notas));
-        content_rep.setText(this.getUndNota("rep", notas));
-        content_res.setText(this.getUndNota("res", notas));
+        this.setViewNota(content_nota1, this.getUndNota("und1", notas));
+        this.setViewNota(content_nota2, this.getUndNota("und2", notas));
+        this.setViewNota(content_nota3, this.getUndNota("und3", notas));
+        this.setViewNota(content_rep, this.getUndNota("rep", notas));
+        this.setViewNota(content_res, this.getUndNota("res", notas));
     }
 
     @Override
@@ -65,13 +66,23 @@ public class NotasAdapter extends RecyclerView.Adapter<NotasAdapter.NotasHolder>
         }
     }
 
-    private String getUndNota(String undNota, ArrayList<mNota> notas){
-        String nota = "-";
+    private void setViewNota(TextView textView, float nota){
+        if (nota < 6 && nota != -1){
+            textView.setTextColor(ContextCompat.getColor(context, R.color.bgError));
+        }
+
+        if (nota != -1){
+            textView.setText(String.valueOf(nota));
+        } else {
+            textView.setText("-");
+        }
+    }
+
+    private float getUndNota(String undNota, ArrayList<mNota> notas){
+        float nota = 0;
         for (mNota mNota : notas){
             if (mNota.getUndNota().equals(undNota)){
-                if (mNota.getNota() != -1){
-                    nota = String.valueOf(mNota.getNota());
-                }
+                nota = mNota.getNota();
                 break;
             }
         }
