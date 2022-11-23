@@ -70,7 +70,20 @@
                     android:text="@string/app_name"
                     android:textColor="@color/white"
                     android:textSize="20sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold"
+                    tools:ignore="RelativeOverlap" />
+
+                <ImageButton
+                    android:id="@+id/btn_help"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:background="@mipmap/question_circle_fill"
+                    android:backgroundTint="@color/white"
+                    android:paddingVertical="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@string/btn_help"
+                    android:visibility="invisible"/>
 
             </RelativeLayout>
 

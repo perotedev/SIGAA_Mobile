@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="15dp"
+    android:paddingTop="15dp">
+
+    <TextView
+        android:id="@+id/legenda_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/legenda_nota_title"
+        android:textStyle="bold"
+        android:textColor="?colorAccent"/>
+
+    <TextView
+        android:id="@+id/un1_title"
+        android:layout_below="@+id/legenda_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/un1"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/un1_desc"
+        android:layout_below="@+id/legenda_title"
+        android:layout_toEndOf="@+id/un1_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="3dp"
+        android:text="@string/un1_desc"/>
+
+    <TextView
+        android:id="@+id/un2_title"
+        android:layout_below="@+id/un1_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/un2"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/un2_desc"
+        android:layout_below="@+id/un1_desc"
+        android:layout_toEndOf="@+id/un2_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="@string/un2_desc"/>
+
+    <TextView
+        android:id="@+id/un3_title"
+        android:layout_below="@+id/un2_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/un3"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/un3_desc"
+        android:layout_below="@+id/un2_desc"
+        android:layout_toEndOf="@+id/un3_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="@string/un3_desc"/>
+
+    <TextView
+        android:id="@+id/rep_title"
+        android:layout_below="@+id/un3_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rep_leg"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/rep_desc"
+        android:layout_below="@+id/un3_desc"
+        android:layout_toEndOf="@+id/rep_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="@string/rep_desc"/>
+
+    <TextView
+        android:id="@+id/res_title"
+        android:layout_below="@+id/rep_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/res_leg"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/res_desc"
+        android:layout_below="@+id/rep_desc"
+        android:layout_toEndOf="@+id/res_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="@string/res_desc"/>
+
+</RelativeLayout>

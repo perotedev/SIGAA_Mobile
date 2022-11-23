@@ -31,10 +31,6 @@ public class MenuFragment extends Fragment {
     private mDadosAcademicos mDadosAcademicos = new mDadosAcademicos();
     private mCurso mCurso = new mCurso();
 
-    public static MenuFragment newInstance() {
-        return new MenuFragment();
-    }
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -62,6 +62,7 @@
     <string name="account_logo">Logo de Conta de Usuário</string>
     <string name="account_logo_bg">Cor do fundo do logo de conta de usuário</string>
     <string name="arrow_down">Icon Chevron Down</string>
+    <string name="btn_help">Botão de ajuda</string>
 
     <!--  Texto pra Teste  -->
     <string name="teste">Texto de Teste</string>
@@ -72,6 +73,19 @@
     <string name="teste_porcentagem">82%</string>
     <string name="teste_data">12/05/2022</string>
     <string name="app_version">V1.0.0</string>
+
+    <!--  Legenda Notas  -->
+    <string name="legenda_nota_title">Legenda das Notas</string>
+    <string name="un1">UND 1:</string>
+    <string name="un1_desc">Unidade 1</string>
+    <string name="un2">UND 2:</string>
+    <string name="un2_desc">Unidade 2</string>
+    <string name="un3">UND 3:</string>
+    <string name="un3_desc">Unidade 3</string>
+    <string name="rep_leg">REP:</string>
+    <string name="rep_desc">Reposição</string>
+    <string name="res_leg">RES:</string>
+    <string name="res_desc">Resultado Final</string>
 
     <!--  Alertas  -->
     <string name="invalid_login_alert">Usuário ou senha inválidos!</string>

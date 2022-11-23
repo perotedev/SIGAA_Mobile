@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -14,12 +15,14 @@ import com.example.sigaamobile.MainActivity;
 import com.example.sigaamobile.R;
 import com.example.sigaamobile.models.mNotasDisciplina;
 import com.example.sigaamobile.ui.adapter.NotasAdapter;
+import com.example.sigaamobile.ui.dialog.LegendaNotasDialogFragment;
 import com.example.sigaamobile.utils.FromJson;
 import com.example.sigaamobile.utils.SigaaSharedPreferences;
 
 import java.util.ArrayList;
 
 public class NotasFragment extends Fragment {
+    ImageView btnHelp;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,8 @@ public class NotasFragment extends Fragment {
 
         MainActivity.setNavBarButton(requireActivity(), R.id.btn_voltar);
         MainActivity.setNavBarTitle(requireActivity(), R.string.notas);
+        this.btnHelp = requireActivity().findViewById(R.id.btn_help);
+        this.btnHelp.setVisibility(View.VISIBLE);
 
         SigaaSharedPreferences preferences = new SigaaSharedPreferences(requireContext());
         RecyclerView listagemNotas = view.findViewById(R.id.recycler_view_notas);
@@ -55,5 +60,18 @@ public class NotasFragment extends Fragment {
         );
         LinearLayoutManager layoutManager = new LinearLayoutManager(requireContext());
         listagemNotas.setLayoutManager(layoutManager);
+
+        this.btnHelp.setOnClickListener(v -> this.showLegenda());
+    }
+
+    private void showLegenda(){
+        LegendaNotasDialogFragment dialogFragment = new LegendaNotasDialogFragment();
+        dialogFragment.show(requireActivity().getSupportFragmentManager(), "notas");
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        this.btnHelp.setVisibility(View.INVISIBLE);
     }
 }
