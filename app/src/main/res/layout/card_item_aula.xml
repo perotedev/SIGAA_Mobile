@@ -5,7 +5,6 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/constraint_aula_frequencia"
-    android:background="@color/white_transparent"
     android:paddingVertical="2dp">
 
     <TextView

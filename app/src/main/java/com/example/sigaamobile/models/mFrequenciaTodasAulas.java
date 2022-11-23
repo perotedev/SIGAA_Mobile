@@ -8,7 +8,7 @@ public class mFrequenciaTodasAulas {
     private ArrayList<mFrequenciaAula> frequenciasAulas;
     private String nomeDisciplina;
     private float percentualFrequencia;
-    private int fequencia, aulasMinistradas, idAluno, idFrequencia;
+    private int frequencia, aulasMinistradas, idAluno, idFrequencia;
 
     public mFrequenciaTodasAulas(){}
 }

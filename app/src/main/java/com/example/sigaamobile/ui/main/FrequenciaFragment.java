@@ -7,9 +7,17 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sigaamobile.MainActivity;
 import com.example.sigaamobile.R;
+import com.example.sigaamobile.models.mFrequenciaTodasAulas;
+import com.example.sigaamobile.ui.adapter.FrequenciaAdapter;
+import com.example.sigaamobile.utils.FromJson;
+import com.example.sigaamobile.utils.SigaaSharedPreferences;
+
+import java.util.ArrayList;
 
 public class FrequenciaFragment extends Fragment {
 
@@ -30,7 +38,22 @@ public class FrequenciaFragment extends Fragment {
 
         MainActivity.setNavBarButton(requireActivity(), R.id.btn_voltar);
         MainActivity.setNavBarTitle(requireActivity(), R.string.frequencia);
+        SigaaSharedPreferences preferences = new SigaaSharedPreferences(requireContext());
 
+        RecyclerView listagemFrequencia = view.findViewById(R.id.recycler_view_frequencia);
+        ArrayList<mFrequenciaTodasAulas> listaFrequencias = FromJson.getmFrequenciaTodasAulas(
+                preferences.getInt("idAluno"),
+                requireActivity()
+        );
 
+        listagemFrequencia.setAdapter(
+                new FrequenciaAdapter(
+                        listaFrequencias,
+                        requireContext()
+                )
+        );
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(requireContext());
+        listagemFrequencia.setLayoutManager(layoutManager);
     }
 }
