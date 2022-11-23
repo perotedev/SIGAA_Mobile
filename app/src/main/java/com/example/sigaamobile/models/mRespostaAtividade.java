@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 public class mRespostaAtividade {
     private int idAluno, idAtividade;
-    private String comentarioAluno, anexoRespostaUrl;
+    private String comentarioAluno, comentarioProfessor, anexoRespostaUrl, anexoCorrecaoUrl;
     private File anexoRespostaFile;
 
     public mRespostaAtividade(){}

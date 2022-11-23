@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/atividade_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/teste_plus_plus"
+        android:paddingTop="15dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/atividade_descricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/teste_plus_plus"
+        app:layout_constraintTop_toBottomOf="@+id/atividade_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/icon_calendar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/calendar_month"
+        app:tint="?android:textColor"
+        app:layout_constraintTop_toBottomOf="@+id/atividade_descricao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/data_inicio_atividade"
+        android:contentDescription="@string/icone_calendario" />
+
+    <TextView
+        android:id="@+id/data_inicio_atividade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="@string/teste_data"
+        app:layout_constraintTop_toTopOf="@+id/icon_calendar"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_calendar"
+        app:layout_constraintStart_toEndOf="@+id/icon_calendar"/>
+
+    <ImageView
+        android:id="@+id/icon_arrow_right"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="3dp"
+        android:src="@drawable/arrow_forward"
+        app:tint="?android:textColor"
+        app:layout_constraintTop_toTopOf="@+id/icon_calendar"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_calendar"
+        app:layout_constraintStart_toEndOf="@+id/data_inicio_atividade"
+        android:contentDescription="@string/icone_calendario" />
+
+    <TextView
+        android:id="@+id/data_fim_atividade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="@string/teste_data"
+        app:layout_constraintTop_toTopOf="@+id/icon_calendar"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_calendar"
+        app:layout_constraintStart_toEndOf="@+id/icon_arrow_right"/>
+
+    <ImageView
+        android:id="@+id/icon_status"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:src="@drawable/check_circle"
+        app:tint="?android:textColor"
+        app:layout_constraintTop_toBottomOf="@+id/icon_calendar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/status_da_atividade"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/icone_calendario" />
+
+    <TextView
+        android:id="@+id/status_da_atividade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:paddingBottom="15dp"
+        android:text="@string/teste_plus_plus"
+        app:layout_constraintTop_toTopOf="@+id/icon_status"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/icon_status"/>
+
+    <ImageView
+        android:id="@+id/btn_ir_atividade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/arrow_forward_ios"
+        app:tint="?android:textColor"
+        android:contentDescription="@string/seta_direita"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,9 +7,17 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sigaamobile.MainActivity;
 import com.example.sigaamobile.R;
+import com.example.sigaamobile.models.mAtividadesDisciplina;
+import com.example.sigaamobile.ui.adapter.AtividadesDisciplinasAdapter;
+import com.example.sigaamobile.utils.FromJson;
+import com.example.sigaamobile.utils.SigaaSharedPreferences;
+
+import java.util.ArrayList;
 
 public class AtividadesFragment extends Fragment {
 
@@ -29,5 +37,23 @@ public class AtividadesFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         MainActivity.setNavBarButton(requireActivity(), R.id.btn_voltar);
+        MainActivity.setNavBarTitle(requireActivity(), R.string.atividades);
+        SigaaSharedPreferences preferences = new SigaaSharedPreferences(requireContext());
+        RecyclerView listaAtividadesDisciplina = view.findViewById(R.id.recycler_view_atividades);
+
+        ArrayList<mAtividadesDisciplina> atividades = FromJson.getmAtividadesDisciplina(
+                preferences.getInt("idAluno"),
+                requireActivity()
+        );
+
+        listaAtividadesDisciplina.setAdapter(
+                new AtividadesDisciplinasAdapter(
+                        atividades,
+                        requireContext()
+                )
+        );
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(requireContext());
+        listaAtividadesDisciplina.setLayoutManager(layoutManager);
     }
 }

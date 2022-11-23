@@ -3,6 +3,7 @@ package com.example.sigaamobile.utils;
 import android.app.Activity;
 
 import com.example.sigaamobile.models.mAluno;
+import com.example.sigaamobile.models.mAtividadesDisciplina;
 import com.example.sigaamobile.models.mCurso;
 import com.example.sigaamobile.models.mDadosAcademicos;
 import com.example.sigaamobile.models.mDocumento;
@@ -132,5 +133,25 @@ public class FromJson {
             }
         }
         return arraymFrequenciaTodasAulas;
+    }
+
+    public static ArrayList<mAtividadesDisciplina> getmAtividadesDisciplina(int idAluno, Activity activity) {
+        ArrayList<mAtividadesDisciplina> atividadesArray = new ArrayList<>();
+        JsonReader jsonReader = new JsonReader(activity);
+        JSONArray jsonArray = jsonReader.read("atividades", "atividades.json");
+
+        for (int index = 0; index < jsonArray.length(); index ++){
+            mAtividadesDisciplina mAtividadesDisciplina;
+            try {
+                Gson gson = new Gson();
+                mAtividadesDisciplina = gson.fromJson(jsonArray.get(index).toString(), mAtividadesDisciplina.class);
+                if (mAtividadesDisciplina.getIdAluno() == idAluno){
+                    atividadesArray.add(mAtividadesDisciplina);
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        return atividadesArray;
     }
 }
