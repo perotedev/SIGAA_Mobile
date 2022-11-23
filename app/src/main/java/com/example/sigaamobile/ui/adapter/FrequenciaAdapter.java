@@ -106,19 +106,13 @@ public class FrequenciaAdapter extends RecyclerView.Adapter<FrequenciaAdapter.Fr
     }
 
     private int getContentExpHeight(RelativeLayout relativeLayout, int position){
-        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT
-        );
-        params.addRule(RelativeLayout.BELOW, R.id.relative_frequencia_title);
-        relativeLayout.setLayoutParams(params);
-        int wrapSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
-        relativeLayout.measure(wrapSpec, wrapSpec);
+        ViewGroup.LayoutParams params = relativeLayout.getLayoutParams();
+        relativeLayout.measure(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         int height = relativeLayout.getMeasuredHeight();
         if (position > 0){
             params.height = 0;
         }
-        relativeLayout.setLayoutParams(params);
+//        params.addRule(RelativeLayout.BELOW, R.id.relative_frequencia_title);
         return height;
     }
 }
