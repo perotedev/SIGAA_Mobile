@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="bg_dark">#2c2c2c</color>
     <color name="shadow">#80000000</color>
-    <color name="white_transparent">#80FFFFFF</color>
+    <color name="white_transparent">#92FFFFFF</color>
     <color name="text_dark">#4A4A4A</color>
     <color name="bg_light">#EFF3FA</color>
 </resources>

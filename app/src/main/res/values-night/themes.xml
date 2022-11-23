@@ -13,6 +13,6 @@
         <!-- Customize your theme here. -->
         <item name="colorOnBackground">?attr/colorButtonNormal</item>
         <item name="colorAccent">@color/bg_light</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="android:textColor">@color/white_transparent</item>
     </style>s
 </resources>
