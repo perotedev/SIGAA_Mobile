@@ -27,14 +27,13 @@
     <string name="ch_total">CH Total Currículo:</string>
     <string name="ch_complementar">CH Complementar Pendente:</string>
 
-    <!--  Botões Menu  -->
+    <!--  Telas  -->
     <string name="notas">Ver Notas</string>
     <string name="frequencia">Frequência</string>
     <string name="atividades">Atividades</string>
     <string name="documentos">Documentos</string>
 
     <!--  Tela Ver Notas  -->
-    <string name="ver_notas">Ver Notas</string>
     <string name="und1">UND 1</string>
     <string name="und2">UND 2</string>
     <string name="und3">UND 3</string>
@@ -42,7 +41,6 @@
     <string name="res">RES</string>
 
     <!--  Tela Documentos  -->
-    <string name="documentos_view_title">Documentos</string>
     <string name="doc_historico">Histórico Escolar</string>
     <string name="desc_doc_historico">Emita seu histórico acadêmico contendo as notas de todas as disciplinas que cursou.</string>
     <string name="doc_declaracao">Declaração de Vínculo</string>
@@ -72,6 +70,7 @@
     <string name="teste_numero">8,0171</string>
     <string name="teste_nota">8,5</string>
     <string name="teste_porcentagem">82%</string>
+    <string name="teste_data">12/05/2022</string>
     <string name="app_version">V1.0.0</string>
 
     <!--  Alertas  -->

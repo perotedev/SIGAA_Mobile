@@ -36,7 +36,7 @@ public class DocumentosFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         MainActivity.setNavBarButton(requireActivity(), R.id.btn_voltar);
-        MainActivity.setNavBarTitle(requireActivity(), R.string.documentos_view_title);
+        MainActivity.setNavBarTitle(requireActivity(), R.string.documentos);
 
         RecyclerView listagemDocumentos = view.findViewById(R.id.recycler_view_documentos);
         ArrayList<mDocumento> arraymDocumentos = FromJson.getmDocumentos(requireActivity());

@@ -37,7 +37,7 @@ public class NotasFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         MainActivity.setNavBarButton(requireActivity(), R.id.btn_voltar);
-        MainActivity.setNavBarTitle(requireActivity(), R.string.ver_notas);
+        MainActivity.setNavBarTitle(requireActivity(), R.string.notas);
 
         SigaaSharedPreferences preferences = new SigaaSharedPreferences(requireContext());
         RecyclerView listagemNotas = view.findViewById(R.id.recycler_view_notas);
