@@ -246,6 +246,252 @@
           "qtdFaltas": 0
         }
       ]
+    },
+    {
+      "idFrequencia": 7,
+      "idAluno": 2,
+      "nomeDisciplina": "ZL - Matemárica Básica",
+      "frequencia": 10,
+      "aulasMinistradas": 12,
+      "percentualFrequencia": 83.3,
+      "frequenciasAulas": [
+        {
+          "frequenciaId": 32,
+          "dataAula": 1662699050,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 33,
+          "dataAula": 1662785450,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 34,
+          "dataAula": 1663303850,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 35,
+          "dataAula": 1663390250,
+          "qtdPresencas": 0,
+          "qtdFaltas": 2
+        },
+        {
+          "frequenciaId": 36,
+          "dataAula": 1663908650,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 37,
+          "dataAula": 1663995050,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        }
+      ]
+    },
+    {
+      "idFrequencia": 8,
+      "idAluno": 2,
+      "nomeDisciplina": "ZL - Desenho de Apresentação",
+      "frequencia": 7,
+      "aulasMinistradas": 12,
+      "percentualFrequencia": 58.3,
+      "frequenciasAulas": [
+        {
+          "frequenciaId": 38,
+          "dataAula": 1662699050,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 39,
+          "dataAula": 1662785450,
+          "qtdPresencas": 0,
+          "qtdFaltas": 2
+        },
+        {
+          "frequenciaId": 40,
+          "dataAula": 1663303850,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 41,
+          "dataAula": 1663390250,
+          "qtdPresencas": 0,
+          "qtdFaltas": 2
+        },
+        {
+          "frequenciaId": 42,
+          "dataAula": 1663908650,
+          "qtdPresencas": 0,
+          "qtdFaltas": 3
+        }
+      ]
+    },
+    {
+      "idFrequencia": 9,
+      "idAluno": 2,
+      "nomeDisciplina": "ZL - Informática",
+      "frequencia": 11,
+      "aulasMinistradas": 12,
+      "percentualFrequencia": 91.6,
+      "frequenciasAulas": [
+        {
+          "frequenciaId": 43,
+          "dataAula": 1662699050,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 44,
+          "dataAula": 1662785450,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 45,
+          "dataAula": 1663303850,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 46,
+          "dataAula": 1663390250,
+          "qtdPresencas": 0,
+          "qtdFaltas": 1
+        },
+        {
+          "frequenciaId": 47,
+          "dataAula": 1663908650,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        }
+      ]
+    },
+    {
+      "idFrequencia": 10,
+      "idAluno": 2,
+      "nomeDisciplina": "ZL - História da Arte",
+      "frequencia": 12,
+      "aulasMinistradas": 12,
+      "percentualFrequencia": 100,
+      "frequenciasAulas": [
+        {
+          "frequenciaId": 48,
+          "dataAula": 1662699050,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 49,
+          "dataAula": 1662785450,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 50,
+          "dataAula": 1663303850,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 51,
+          "dataAula": 1663390250,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 52,
+          "dataAula": 1663908650,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        }
+      ]
+    },
+    {
+      "idFrequencia": 11,
+      "idAluno": 2,
+      "nomeDisciplina": "ZL - Português Instrumental",
+      "frequencia": 12,
+      "aulasMinistradas": 12,
+      "percentualFrequencia": 100,
+      "frequenciasAulas": [
+        {
+          "frequenciaId": 53,
+          "dataAula": 1662699050,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 54,
+          "dataAula": 1662785450,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 55,
+          "dataAula": 1663303850,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 56,
+          "dataAula": 1663390250,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 57,
+          "dataAula": 1663908650,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        }
+      ]
+    },
+    {
+      "idFrequencia": 12,
+      "idAluno": 2,
+      "nomeDisciplina": "ZL - Teoria e Prática de Jardinagem I",
+      "frequencia": 12,
+      "aulasMinistradas": 12,
+      "percentualFrequencia": 100,
+      "frequenciasAulas": [
+        {
+          "frequenciaId": 58,
+          "dataAula": 1662699050,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 59,
+          "dataAula": 1662785450,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 60,
+          "dataAula": 1663303850,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 61,
+          "dataAula": 1663390250,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        },
+        {
+          "frequenciaId": 62,
+          "dataAula": 1663908650,
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
+        }
+      ]
     }
   ]
 }
