@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
@@ -19,6 +18,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import com.example.sigaamobile.MainActivity;
 import com.example.sigaamobile.R;
 import com.example.sigaamobile.models.mUser;
+import com.example.sigaamobile.ui.dialog.AlertaLoginDialogFragment;
 import com.example.sigaamobile.utils.JsonReader;
 import com.example.sigaamobile.utils.SigaaSharedPreferences;
 import com.google.gson.Gson;
@@ -54,15 +54,10 @@ public class LoginFragment extends Fragment {
             if (isUserValid){
                 username.setText("");
                 password.setText("");
-
                 view.findViewById(R.id.login_loader).setVisibility(View.VISIBLE);
                 this.animateAndNavigateToMenu();
             } else {
-                Toast.makeText(
-                        getContext(),
-                        requireActivity().getString(R.string.invalid_login_alert),
-                        Toast.LENGTH_SHORT)
-                        .show();
+                this.showDialog();
             }
         });
 
@@ -101,6 +96,11 @@ public class LoginFragment extends Fragment {
             }
         }
         return isUserValid;
+    }
+
+    private void showDialog(){
+        AlertaLoginDialogFragment alert = new AlertaLoginDialogFragment();
+        alert.show(requireActivity().getSupportFragmentManager(), "login");
     }
 
     private void animateAndNavigateToMenu(){

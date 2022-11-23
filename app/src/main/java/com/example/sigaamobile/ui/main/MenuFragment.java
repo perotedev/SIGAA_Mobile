@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
@@ -20,6 +21,7 @@ import com.example.sigaamobile.enums.eAlunoStatus;
 import com.example.sigaamobile.models.mAluno;
 import com.example.sigaamobile.models.mCurso;
 import com.example.sigaamobile.models.mDadosAcademicos;
+import com.example.sigaamobile.ui.dialog.DialogAlertaOnBackMenuFragment;
 import com.example.sigaamobile.utils.AnimateChangeHeight;
 import com.example.sigaamobile.utils.FromJson;
 import com.example.sigaamobile.utils.SigaaSharedPreferences;
@@ -37,16 +39,14 @@ public class MenuFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        // This callback will only be called when MyFragment is at least Started.
-//        OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
-//            @Override
-//            public void handleOnBackPressed() {
-//                // Handle the back button event
-//            }
-//        };
-//        requireActivity().getOnBackPressedDispatcher().addCallback(this, callback);
-//
-//        // The callback can be enabled or disabled here or in handleOnBackPressed()
+        OnBackPressedCallback callback = new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                DialogAlertaOnBackMenuFragment dialog = new DialogAlertaOnBackMenuFragment();
+                dialog.show(requireActivity().getSupportFragmentManager(), "sair");
+            }
+        };
+        requireActivity().getOnBackPressedDispatcher().addCallback(this, callback);
     }
 
     @Nullable

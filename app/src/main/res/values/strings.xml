@@ -74,7 +74,14 @@
     <string name="app_version">V1.0.0</string>
 
     <!--  Alertas  -->
-    <string name="invalid_login_alert">Usuário ou Senha Inválidos!</string>
+    <string name="invalid_login_alert">Usuário ou senha inválidos!</string>
+    <string name="alerta_deslogar">Você está prestes a sair do SIGAA Mobile, deseja continuar?</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+    <string name="fechar">Fechar</string>
+    <string name="ok_alert">OK</string>
+    <string name="voltar_alert">Voltar</string>
+    <string name="atencao">Atenção!</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
