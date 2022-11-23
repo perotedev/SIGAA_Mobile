@@ -7,24 +7,26 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.sigaamobile.R;
 import com.example.sigaamobile.models.mFrequenciaTodasAulas;
+import com.example.sigaamobile.utils.AnimateChangeHeight;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class FrequenciaAdapter extends RecyclerView.Adapter<FrequenciaAdapter.FrequenciaHolder> {
     private final List<mFrequenciaTodasAulas> listaFrequencia;
     private final Context context;
+    private final ArrayList<Integer> maxHeightCards;
 
     public FrequenciaAdapter(List<mFrequenciaTodasAulas> listaFrequencia, Context context) {
         this.listaFrequencia = listaFrequencia;
         this.context = context;
+        this.maxHeightCards = new ArrayList<>();
     }
 
     @NonNull
@@ -39,12 +41,6 @@ public class FrequenciaAdapter extends RecyclerView.Adapter<FrequenciaAdapter.Fr
         mFrequenciaTodasAulas mFrequenciaTodasAulas = this.listaFrequencia.get(position);
 
         RelativeLayout listagemAulas = holder.itemView.findViewById(R.id.relative_frequencia_content);
-        if (position > 0) {
-            ViewGroup.LayoutParams params = listagemAulas.getLayoutParams();
-            params.height = 0;
-            listagemAulas.setLayoutParams(params);
-        }
-
         ImageView arrowDown = holder.itemView.findViewById(R.id.arrow_down_frequencia);
         TextView disciplina_frencia_card = holder.itemView.findViewById(R.id.disciplina_frencia_card);
         TextView frequencia_aluno_value = holder.itemView.findViewById(R.id.frequencia_aluno_value);
@@ -74,6 +70,13 @@ public class FrequenciaAdapter extends RecyclerView.Adapter<FrequenciaAdapter.Fr
         );
         LinearLayoutManager layoutManager = new LinearLayoutManager(holder.itemView.getContext());
         listaAulas.setLayoutManager(layoutManager);
+
+        this.maxHeightCards.add(position, this.getContentExpHeight(listagemAulas, position));
+        System.out.println(this.maxHeightCards);
+
+        holder.itemView.setOnClickListener(v -> {
+            this.onClickCard(listagemAulas, arrowDown, position);
+        });
     }
 
     @Override
@@ -87,4 +90,35 @@ public class FrequenciaAdapter extends RecyclerView.Adapter<FrequenciaAdapter.Fr
         }
     }
 
+    private void onClickCard(RelativeLayout view, ImageView arrowDown, int position){
+        if (arrowDown.getRotation() == 180){
+            this.mostraListaDeAulas(view, 0);
+            arrowDown.animate().rotation(0f).setDuration(300).start();
+        } else {
+            this.mostraListaDeAulas(view, this.maxHeightCards.get(position));
+            arrowDown.animate().rotation(180f).setDuration(300).start();
+        }
+    }
+
+    private void mostraListaDeAulas(RelativeLayout relativeLayout, int newHeight){
+        AnimateChangeHeight animateChangeHeight = new AnimateChangeHeight(relativeLayout, newHeight);
+        animateChangeHeight.updateAnimate();
+    }
+
+    private int getContentExpHeight(RelativeLayout relativeLayout, int position){
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT
+        );
+        params.addRule(RelativeLayout.BELOW, R.id.relative_frequencia_title);
+        relativeLayout.setLayoutParams(params);
+        int wrapSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
+        relativeLayout.measure(wrapSpec, wrapSpec);
+        int height = relativeLayout.getMeasuredHeight();
+        if (position > 0){
+            params.height = 0;
+        }
+        relativeLayout.setLayoutParams(params);
+        return height;
+    }
 }

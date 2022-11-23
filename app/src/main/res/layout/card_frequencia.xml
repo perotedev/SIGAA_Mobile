@@ -79,8 +79,7 @@
                     android:layout_below="@+id/data_aula_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:listitem="@layout/card_item_aula"
-                    tools:itemCount="6"/>
+                    tools:listitem="@layout/card_item_aula"/>
 
             </RelativeLayout>
 
