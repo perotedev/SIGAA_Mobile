@@ -251,9 +251,9 @@
       "idFrequencia": 7,
       "idAluno": 2,
       "nomeDisciplina": "ZL - Matemárica Básica",
-      "frequencia": 10,
+      "frequencia": 12,
       "aulasMinistradas": 12,
-      "percentualFrequencia": 83.3,
+      "percentualFrequencia": 100,
       "frequenciasAulas": [
         {
           "frequenciaId": 32,
@@ -276,8 +276,8 @@
         {
           "frequenciaId": 35,
           "dataAula": 1663390250,
-          "qtdPresencas": 0,
-          "qtdFaltas": 2
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
         },
         {
           "frequenciaId": 36,
@@ -297,39 +297,39 @@
       "idFrequencia": 8,
       "idAluno": 2,
       "nomeDisciplina": "ZL - Desenho de Apresentação",
-      "frequencia": 7,
+      "frequencia": 12,
       "aulasMinistradas": 12,
-      "percentualFrequencia": 58.3,
+      "percentualFrequencia": 100,
       "frequenciasAulas": [
         {
-          "frequenciaId": 38,
+          "frequenciaId": 53,
           "dataAula": 1662699050,
           "qtdPresencas": 2,
           "qtdFaltas": 0
         },
         {
-          "frequenciaId": 39,
+          "frequenciaId": 54,
           "dataAula": 1662785450,
-          "qtdPresencas": 0,
-          "qtdFaltas": 2
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
         },
         {
-          "frequenciaId": 40,
+          "frequenciaId": 55,
           "dataAula": 1663303850,
           "qtdPresencas": 2,
           "qtdFaltas": 0
         },
         {
-          "frequenciaId": 41,
+          "frequenciaId": 56,
           "dataAula": 1663390250,
-          "qtdPresencas": 0,
-          "qtdFaltas": 2
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
         },
         {
-          "frequenciaId": 42,
+          "frequenciaId": 57,
           "dataAula": 1663908650,
-          "qtdPresencas": 0,
-          "qtdFaltas": 3
+          "qtdPresencas": 2,
+          "qtdFaltas": 0
         }
       ]
     },
@@ -417,41 +417,42 @@
       "idFrequencia": 11,
       "idAluno": 2,
       "nomeDisciplina": "ZL - Português Instrumental",
-      "frequencia": 12,
+      "frequencia": 7,
       "aulasMinistradas": 12,
-      "percentualFrequencia": 100,
+      "percentualFrequencia": 58.3,
       "frequenciasAulas": [
         {
-          "frequenciaId": 53,
+          "frequenciaId": 38,
           "dataAula": 1662699050,
           "qtdPresencas": 2,
           "qtdFaltas": 0
         },
         {
-          "frequenciaId": 54,
+          "frequenciaId": 39,
           "dataAula": 1662785450,
-          "qtdPresencas": 2,
-          "qtdFaltas": 0
+          "qtdPresencas": 0,
+          "qtdFaltas": 2
         },
         {
-          "frequenciaId": 55,
+          "frequenciaId": 40,
           "dataAula": 1663303850,
           "qtdPresencas": 2,
           "qtdFaltas": 0
         },
         {
-          "frequenciaId": 56,
+          "frequenciaId": 41,
           "dataAula": 1663390250,
-          "qtdPresencas": 2,
-          "qtdFaltas": 0
+          "qtdPresencas": 0,
+          "qtdFaltas": 2
         },
         {
-          "frequenciaId": 57,
+          "frequenciaId": 42,
           "dataAula": 1663908650,
-          "qtdPresencas": 2,
-          "qtdFaltas": 0
+          "qtdPresencas": 0,
+          "qtdFaltas": 3
         }
       ]
+
     },
     {
       "idFrequencia": 12,
