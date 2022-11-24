@@ -47,6 +47,7 @@
             android:id="@+id/relative_atividades_content"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:paddingBottom="15dp"
             android:background="?colorOnBackground">
 
             <ListView
@@ -64,8 +65,8 @@
             android:padding="15dp"
             android:background="?colorOnBackground">
 
-            <ListView
-                android:id="@+id/list_quantidade_aulas"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_qtd_atividades"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:listitem="@layout/card_item_qtd_atividades"/>

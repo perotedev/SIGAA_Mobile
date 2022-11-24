@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingHorizontal="15dp"
+    android:padding="15dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/teste_plus_plus"
-        android:paddingTop="15dp"
+        android:layout_marginEnd="40dp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,6 +21,7 @@
         android:id="@+id/atividade_descricao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
         android:text="@string/teste_plus_plus"
         app:layout_constraintTop_toBottomOf="@+id/atividade_title"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,7 +75,6 @@
         android:id="@+id/icon_status"
         android:layout_width="20dp"
         android:layout_height="wrap_content"
-        android:paddingBottom="15dp"
         android:src="@drawable/check_circle"
         app:tint="?android:textColor"
         app:layout_constraintTop_toBottomOf="@+id/icon_calendar"
@@ -88,7 +88,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
-        android:paddingBottom="15dp"
         android:text="@string/teste_plus_plus"
         app:layout_constraintTop_toTopOf="@+id/icon_status"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -10,10 +10,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sigaamobile.R;
-import com.example.sigaamobile.enums.eAtividadeStatus;
 import com.example.sigaamobile.models.mAtividade;
 import com.example.sigaamobile.models.mAtividadesDisciplina;
 import com.example.sigaamobile.models.mQtdAtividadesResumo;
@@ -50,7 +50,7 @@ public class AtividadesDisciplinasAdapter extends RecyclerView.Adapter<Atividade
         RelativeLayout semAtividadesView = holder.itemView.findViewById(R.id.relative_no_atividades);
         RelativeLayout qtdAtividades = holder.itemView.findViewById(R.id.relative_atividades_qtd_resumo);
         RelativeLayout listaAtividades = holder.itemView.findViewById(R.id.relative_atividades_content);
-        ListView listaResumo = holder.itemView.findViewById(R.id.list_quantidade_aulas);
+        RecyclerView listaResumo = holder.itemView.findViewById(R.id.recycler_view_qtd_atividades);
         ListView listViewAtividades = holder.itemView.findViewById(R.id.list_view_aulas);
 
         tituloAtividade.setText(mAtividadesDisciplina.getNomeDisciplina());
@@ -68,6 +68,8 @@ public class AtividadesDisciplinasAdapter extends RecyclerView.Adapter<Atividade
                             holder.itemView.getContext()
                     )
             );
+            LinearLayoutManager layoutManager = new LinearLayoutManager(holder.itemView.getContext());
+            listaResumo.setLayoutManager(layoutManager);
             this.showItemContent(qtdAtividades);
 
             listViewAtividades.setAdapter(
@@ -78,15 +80,18 @@ public class AtividadesDisciplinasAdapter extends RecyclerView.Adapter<Atividade
             );
         }
 
-
         this.maxHeightCards.add(position, this.getContentExpHeight(listaAtividades));
 
         holder.itemView.setOnClickListener(v -> {
-            this.onClickCard(listaAtividades, arrowDown, position);
+            if (atividades.size() > 0){
+                this.onClickCard(listaAtividades, arrowDown, position, qtdAtividades);
+            }
         });
 
         if (position == 0){
-            this.onClickCard(listaAtividades, arrowDown, position);
+            if (atividades.size() > 0){
+                this.onClickCard(listaAtividades, arrowDown, position, qtdAtividades);
+            }
         }
     }
 
@@ -106,9 +111,9 @@ public class AtividadesDisciplinasAdapter extends RecyclerView.Adapter<Atividade
         int countPendente = 0, countEntregue = 0, countNaoEntregue = 0;
 
         for (mAtividade mAtividade : atividades) {
-            if (mAtividade.getStatusId() == eAtividadeStatus.valueOf("PENDENTE_DE_ENTREGA").ordinal()){
+            if (mAtividade.getStatusId() == 0){
                 countPendente++;
-            } else if (mAtividade.getStatusId() == eAtividadeStatus.valueOf("ATIVIDADE_ENTREGUE").ordinal()){
+            } else if (mAtividade.getStatusId() == 1){
                 countEntregue++;
             } else {
                 countNaoEntregue++;
@@ -117,7 +122,7 @@ public class AtividadesDisciplinasAdapter extends RecyclerView.Adapter<Atividade
 
         if (countEntregue > 0) {
             arrayQtds.add(new mQtdAtividadesResumo(
-                    eAtividadeStatus.valueOf("ATIVIDADE_ENTREGUE").ordinal(),
+                    0,
                     countEntregue,
                     "Atividade(s) entregue(s)"
             ));
@@ -125,7 +130,7 @@ public class AtividadesDisciplinasAdapter extends RecyclerView.Adapter<Atividade
 
         if (countPendente > 0){
             arrayQtds.add(new mQtdAtividadesResumo(
-                    eAtividadeStatus.valueOf("PENDENTE_DE_ENTREGA").ordinal(),
+                    1,
                     countEntregue,
                     "Atividade(s) aguardando entrega"
             ));
@@ -133,12 +138,13 @@ public class AtividadesDisciplinasAdapter extends RecyclerView.Adapter<Atividade
 
         if (countNaoEntregue > 0){
             arrayQtds.add(new mQtdAtividadesResumo(
-                    eAtividadeStatus.valueOf("ATIVIDADE_NAO_ENTREGUE").ordinal(),
+                    2,
                     countEntregue,
                     "Atividade(s) não entregue(s)"
             ));
         }
 
+        System.out.println("arrayQtd: "+arrayQtds);
         return arrayQtds;
     }
 
@@ -148,14 +154,18 @@ public class AtividadesDisciplinasAdapter extends RecyclerView.Adapter<Atividade
         view.setLayoutParams(params);
     }
 
-    private void onClickCard(View view, ImageView arrowDown, int position){
+    private void onClickCard(View view, ImageView arrowDown, int position, RelativeLayout listaResumo){
+        ViewGroup.LayoutParams params = listaResumo.getLayoutParams();
         if (arrowDown.getRotation() == 180){
+            params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
             this.mostraListaAtividades(view, 0);
             arrowDown.animate().rotation(0f).setDuration(300).start();
         } else {
+            params.height = 0;
             this.mostraListaAtividades(view, this.maxHeightCards.get(position));
             arrowDown.animate().rotation(180f).setDuration(300).start();
         }
+        listaResumo.setLayoutParams(params);
     }
 
     private void mostraListaAtividades(View view, int newHeight){
@@ -166,7 +176,7 @@ public class AtividadesDisciplinasAdapter extends RecyclerView.Adapter<Atividade
     private int getContentExpHeight(View view){
         ViewGroup.LayoutParams params = view.getLayoutParams();
         view.measure(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        int height = view.getMeasuredHeight();
+        int height = view.getMeasuredHeight() + view.getPaddingTop() + view.getPaddingBottom();
         params.height = 0;
         view.setLayoutParams(params);
         return height;
