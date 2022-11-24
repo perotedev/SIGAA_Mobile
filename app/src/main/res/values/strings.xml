@@ -32,6 +32,7 @@
     <string name="frequencia">Frequência</string>
     <string name="atividades">Atividades</string>
     <string name="documentos">Documentos</string>
+    <string name="resposta_atividade">Ver Resposta</string>
 
     <!--  Tela Ver Notas  -->
     <string name="und1">UND 1</string>
@@ -53,6 +54,13 @@
     <string name="situacao_frequencia">Situação</string>
     <string name="frequencia_aluno">Frequência:</string>
     <string name="aulas_ministradas">Aulas Ministradas:</string>
+
+    <!--  Tela Ver Resposta da Atividade  -->
+    <string name="title_resposta">Resposta Enviada</string>
+    <string name="comentario_reposta">Comentários:</string>
+    <string name="correcao">Correção</string>
+    <string name="btn_baixar_respota">Baixar resposta enviada</string>
+    <string name="btn_baixar_correcao">Baixar anexo da correção</string>
 
     <!--  Descrições  -->
     <string name="sigaa_logo">Logo do SIGAA</string>
