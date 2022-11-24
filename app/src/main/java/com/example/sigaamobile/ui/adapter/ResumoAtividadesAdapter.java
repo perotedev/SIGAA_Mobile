@@ -37,15 +37,24 @@ public class ResumoAtividadesAdapter extends RecyclerView.Adapter<ResumoAtividad
 
         String statusString = resumo.getQtdAtividades()+" "+resumo.getStatus();
         TextView status = holder.itemView.findViewById(R.id.des_qtd_atividades_stauts);
-        ImageView iconStatus = holder.itemView.findViewById(R.id.icon_status_total);
         status.setText(statusString);
 
+        ImageView iconStatusCancel = holder.itemView.findViewById(R.id.icon_status_resumo3);
+        ImageView iconStatusChecked = holder.itemView.findViewById(R.id.icon_status_resumo1);
+        ImageView iconStatusNotDisturb = holder.itemView.findViewById(R.id.icon_status_resumo2);
+
         if (resumo.getStatusId() == 0){
-            iconStatus.setImageResource(R.drawable.not_disturb);
+            iconStatusChecked.setVisibility(View.INVISIBLE);
+            iconStatusCancel.setVisibility(View.INVISIBLE);
+            iconStatusNotDisturb.setVisibility(View.VISIBLE);
         } else if (resumo.getStatusId() == 1){
-            iconStatus.setImageResource(R.drawable.check_circle);
+            iconStatusChecked.setVisibility(View.VISIBLE);
+            iconStatusCancel.setVisibility(View.INVISIBLE);
+            iconStatusNotDisturb.setVisibility(View.INVISIBLE);
         } else if (resumo.getStatusId() == 2) {
-            iconStatus.setImageResource(R.drawable.cancel_icon);
+            iconStatusChecked.setVisibility(View.VISIBLE);
+            iconStatusCancel.setVisibility(View.INVISIBLE);
+            iconStatusNotDisturb.setVisibility(View.INVISIBLE);
         }
     }
 

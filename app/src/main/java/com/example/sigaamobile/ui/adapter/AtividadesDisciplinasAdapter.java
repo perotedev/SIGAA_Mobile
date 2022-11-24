@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -86,6 +87,12 @@ public class AtividadesDisciplinasAdapter extends RecyclerView.Adapter<Atividade
         holder.itemView.setOnClickListener(v -> {
             if (atividades.size() > 0){
                 this.onClickCard(listaAtividades, arrowDown, position, qtdAtividades);
+            } else {
+                Toast.makeText(
+                        context,
+                        "Sem atividades cadastradas para "+mAtividadesDisciplina.getNomeDisciplina()+"!",
+                        Toast.LENGTH_SHORT)
+                        .show();
             }
         });
 

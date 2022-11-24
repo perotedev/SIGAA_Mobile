@@ -1,6 +1,7 @@
 package com.example.sigaamobile.ui.adapter;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import com.example.sigaamobile.R;
 import com.example.sigaamobile.models.mAtividade;
 import com.example.sigaamobile.ui.dialog.AtividadeExpiradaDialogFragment;
 import com.example.sigaamobile.utils.DateTransform;
+import com.google.gson.Gson;
 
 import java.util.List;
 
@@ -68,9 +70,13 @@ public class DescricaoAtividadesAdapter extends ArrayAdapter<mAtividade> {
         View finalView = view;
         view.setOnClickListener(v ->{
             if (atividade.getStatusId() == 1){
-                this.navigateTo(finalView, R.id.verRespostaAtividadeFragment);
+                this.navigateTo(finalView, R.id.verRespostaAtividadeFragment, null);
             } else if (atividade.getStatusId() == 0){
-                this.navigateTo(finalView, R.id.verAtividadeFragment);
+                String jsonString = new Gson().toJson(atividade);
+                Bundle bundle = new Bundle();
+                bundle.putString("atividade", jsonString);
+                System.out.println("stringAtividade: "+jsonString);
+                this.navigateTo(finalView, R.id.verAtividadeFragment, bundle);
             } else {
                 AtividadeExpiradaDialogFragment dialog = new AtividadeExpiradaDialogFragment();
                 dialog.show(((MainActivity) context).getSupportFragmentManager(), "atividade");
@@ -80,7 +86,7 @@ public class DescricaoAtividadesAdapter extends ArrayAdapter<mAtividade> {
         return view;
     }
 
-    private void navigateTo(View actualView, int fragmentId){
-        Navigation.findNavController(actualView).navigate(fragmentId);
+    private void navigateTo(View actualView, int fragmentId, Bundle bundle){
+        Navigation.findNavController(actualView).navigate(fragmentId, bundle);
     }
 }
