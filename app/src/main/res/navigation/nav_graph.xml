@@ -53,11 +53,30 @@
         android:id="@+id/atividadesFragment"
         android:name="com.example.sigaamobile.ui.main.AtividadesFragment"
         android:label="fragment_atividades"
-        tools:layout="@layout/fragment_atividades" />
+        tools:layout="@layout/fragment_atividades" >
+        <action
+            android:id="@+id/action_atividadesFragment_to_verAtividadeFragment"
+            app:destination="@id/verAtividadeFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_atividadesFragment_to_verRespostaAtividadeFragment"
+            app:destination="@id/verRespostaAtividadeFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
     <fragment
         android:id="@+id/frequenciaFragment"
         android:name="com.example.sigaamobile.ui.main.FrequenciaFragment"
         android:label="fragment_frequencia"
         tools:layout="@layout/fragment_frequencia" />
+    <fragment
+        android:id="@+id/verAtividadeFragment"
+        android:name="com.example.sigaamobile.ui.main.VerAtividadeFragment"
+        android:label="fragment_ver_atividade"
+        tools:layout="@layout/fragment_ver_atividade" />
+    <fragment
+        android:id="@+id/verRespostaAtividadeFragment"
+        android:name="com.example.sigaamobile.ui.main.VerRespostaAtividadeFragment"
+        android:label="fragment_ver_resposta_atividade"
+        tools:layout="@layout/fragment_ver_resposta_atividade" />
 
 </navigation>

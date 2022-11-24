@@ -10,9 +10,12 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.navigation.Navigation;
 
+import com.example.sigaamobile.MainActivity;
 import com.example.sigaamobile.R;
 import com.example.sigaamobile.models.mAtividade;
+import com.example.sigaamobile.ui.dialog.AtividadeExpiradaDialogFragment;
 import com.example.sigaamobile.utils.DateTransform;
 
 import java.util.List;
@@ -62,6 +65,22 @@ public class DescricaoAtividadesAdapter extends ArrayAdapter<mAtividade> {
             iconStatus.setImageResource(R.drawable.cancel_icon);
         }
 
+        View finalView = view;
+        view.setOnClickListener(v ->{
+            if (atividade.getStatusId() == 1){
+                this.navigateTo(finalView, R.id.verRespostaAtividadeFragment);
+            } else if (atividade.getStatusId() == 0){
+                this.navigateTo(finalView, R.id.verAtividadeFragment);
+            } else {
+                AtividadeExpiradaDialogFragment dialog = new AtividadeExpiradaDialogFragment();
+                dialog.show(((MainActivity) context).getSupportFragmentManager(), "atividade");
+            }
+        });
+
         return view;
+    }
+
+    private void navigateTo(View actualView, int fragmentId){
+        Navigation.findNavController(actualView).navigate(fragmentId);
     }
 }

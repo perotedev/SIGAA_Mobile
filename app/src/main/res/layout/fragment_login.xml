@@ -130,7 +130,8 @@
             app:tint="?colorAccent"
             app:layout_constraintEnd_toEndOf="@id/edit_text_senha"
             app:layout_constraintTop_toTopOf="@+id/edit_text_senha"
-            app:layout_constraintBottom_toBottomOf="@+id/edit_text_senha"/>
+            app:layout_constraintBottom_toBottomOf="@+id/edit_text_senha"
+            android:contentDescription="@string/ver_senha" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_entrar"
