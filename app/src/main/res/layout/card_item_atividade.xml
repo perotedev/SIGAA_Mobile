@@ -89,9 +89,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
         android:text="@string/teste_plus_plus"
-        app:layout_constraintTop_toTopOf="@+id/icon_status"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/icon_status"/>
+        app:layout_constraintStart_toEndOf="@+id/icon_status"
+        app:layout_constraintTop_toTopOf="@+id/icon_status" />
 
     <ImageView
         android:id="@+id/btn_ir_atividade"

@@ -54,6 +54,7 @@
                 android:id="@+id/list_view_aulas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:clipToPadding="true"
                 tools:listitem="@layout/card_item_atividade"/>
         </RelativeLayout>
 
@@ -62,13 +63,13 @@
             android:id="@+id/relative_atividades_qtd_resumo"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:padding="15dp"
             android:background="?colorOnBackground">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view_qtd_atividades"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="15dp"
                 tools:listitem="@layout/card_item_qtd_atividades"/>
 
         </RelativeLayout>

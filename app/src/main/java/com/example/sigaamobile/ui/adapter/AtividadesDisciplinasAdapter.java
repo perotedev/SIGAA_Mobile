@@ -71,14 +71,14 @@ public class AtividadesDisciplinasAdapter extends RecyclerView.Adapter<Atividade
             LinearLayoutManager layoutManager = new LinearLayoutManager(holder.itemView.getContext());
             listaResumo.setLayoutManager(layoutManager);
             this.showItemContent(qtdAtividades);
-
-            listViewAtividades.setAdapter(
-                    new DescricaoAtividadesAdapter(
-                            mAtividadesDisciplina.getAtividades(),
-                            holder.itemView.getContext()
-                    )
-            );
         }
+
+        listViewAtividades.setAdapter(
+                new DescricaoAtividadesAdapter(
+                        mAtividadesDisciplina.getAtividades(),
+                        holder.itemView.getContext()
+                )
+        );
 
         this.maxHeightCards.add(position, this.getContentExpHeight(listaAtividades));
 
