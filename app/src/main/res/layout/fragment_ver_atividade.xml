@@ -120,10 +120,22 @@
                     <TextView
                         android:id="@+id/doc_anexado"
                         android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_height="35dp"
                         android:gravity="center_vertical"
                         android:paddingHorizontal="15dp"
+                        android:background="@drawable/bg_light"
                         android:text="@string/selecionar_arquivo"/>
+
+                    <RelativeLayout
+                        android:id="@+id/btn_selecionar_doc"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/bg_icon_select">
+
+
+
+                    </RelativeLayout>
 
                     <TextView
                         android:id="@+id/comentario_aluno"
@@ -131,14 +143,19 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/comentario_reposta"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"/>
 
-                    <TextView
+                    <EditText
                         android:id="@+id/comentario_aluno_content"
                         android:layout_below="@+id/comentario_aluno"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/teste_plus_plus"/>
+                        android:background="@drawable/bg_light"
+                        android:hint="@string/digite_comentario"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="10dp"
+                        android:layout_marginTop="5dp"/>
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btn_baixar_reposta"
