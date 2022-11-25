@@ -1,10 +1,12 @@
 package com.example.sigaamobile.ui.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -45,6 +47,8 @@ public class VerAtividadeFragment extends Fragment {
         TextView fimAtividade = view.findViewById(R.id.data_fim_atividade);
         TextView statusAtividade = view.findViewById(R.id.status_da_atividade);
         ImageView btnArrowRight = view.findViewById(R.id.btn_ir_atividade);
+        TextView textAreaDoc = view.findViewById(R.id.doc_anexado);
+        RelativeLayout btnSelectDoc = view.findViewById(R.id.btn_selecionar_doc);
 
         btnArrowRight.setVisibility(View.INVISIBLE);
         titleDetalheCard.setHeight(0);
@@ -53,5 +57,22 @@ public class VerAtividadeFragment extends Fragment {
         inicioAtividade.setText(DateTransform.transformToStringDate(mAtividade.getDataInicio()));
         fimAtividade.setText(DateTransform.transformToStringDate(mAtividade.getDataFim()));
         statusAtividade.setText(mAtividade.getStatus());
+
+        textAreaDoc.setOnClickListener(v -> {
+//            String path = Environment.getExternalStorageDirectory()+"/teste_sigaa/";
+//            Uri uri = Uri.parse(path);
+            Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+            intent.setType("*/*");
+            intent = Intent.createChooser(intent, "Choose a file");
+            startActivity(intent);
+        });
+
+        btnSelectDoc.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+            intent.setType("*/*");
+            intent = Intent.createChooser(intent, "Choose a file");
+            startActivity(intent);
+        });
+
     }
 }
