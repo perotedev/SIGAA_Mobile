@@ -1,6 +1,8 @@
 package com.example.sigaamobile.ui.adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,10 +37,15 @@ public class DocumentosAdapter extends RecyclerView.Adapter<DocumentosAdapter.Do
         mDocumento mDocumento = this.documentos.get(position);
         TextView title = holder.itemView.findViewById(R.id.title_doc);
         TextView descricao = holder.itemView.findViewById(R.id.desc_doc);
-        String link = "";
+        String link = "https://www.caceres.mt.gov.br/fotos_institucional_downloads/2.pdf";
 
         title.setText(mDocumento.getNomeDocumento());
         descricao.setText(mDocumento.getDescricao());
+
+        holder.itemView.setOnClickListener(v -> {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+            context.startActivity(browserIntent);
+        });
     }
 
     @Override
