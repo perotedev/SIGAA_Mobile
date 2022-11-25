@@ -50,7 +50,7 @@
                     android:layout_below="@+id/bg_title_card_atividade_detalhe"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="?colorSecondary">
+                    android:background="?colorOnBackground">
 
                     <include
                         android:id="@+id/include_card_atividade_detalhe"
@@ -114,13 +114,13 @@
                     android:layout_below="@+id/bg_title_card_resposta"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="?colorSecondary"
+                    android:background="?colorOnBackground"
                     android:padding="15dp">
 
                     <TextView
                         android:id="@+id/doc_anexado"
                         android:layout_width="match_parent"
-                        android:layout_height="35dp"
+                        android:layout_height="40dp"
                         android:gravity="center_vertical"
                         android:paddingHorizontal="15dp"
                         android:background="@drawable/bg_light"
@@ -128,12 +128,18 @@
 
                     <RelativeLayout
                         android:id="@+id/btn_selecionar_doc"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_alignParentEnd="true"
                         android:background="@drawable/bg_icon_select">
 
-
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/clear_icon"
+                            android:rotation="45"
+                            android:layout_centerInParent="true"
+                            app:tint="?colorOnPrimary" />
 
                     </RelativeLayout>
 
