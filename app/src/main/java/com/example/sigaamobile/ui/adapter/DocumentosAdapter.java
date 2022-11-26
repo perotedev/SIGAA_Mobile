@@ -37,12 +37,12 @@ public class DocumentosAdapter extends RecyclerView.Adapter<DocumentosAdapter.Do
         mDocumento mDocumento = this.documentos.get(position);
         TextView title = holder.itemView.findViewById(R.id.title_doc);
         TextView descricao = holder.itemView.findViewById(R.id.desc_doc);
-        String link = "https://www.caceres.mt.gov.br/fotos_institucional_downloads/2.pdf";
 
         title.setText(mDocumento.getNomeDocumento());
         descricao.setText(mDocumento.getDescricao());
 
         holder.itemView.setOnClickListener(v -> {
+            String link = "https://www.caceres.mt.gov.br/fotos_institucional_downloads/2.pdf";
             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
             context.startActivity(browserIntent);
         });

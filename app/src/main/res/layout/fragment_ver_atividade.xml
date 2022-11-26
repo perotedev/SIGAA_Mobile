@@ -169,7 +169,7 @@
                         android:layout_below="@+id/comentario_aluno_content"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
-                        android:text="@string/btn_baixar_respota"
+                        android:text="@string/btn_enviar_resposta"
                         android:textStyle="bold"
                         android:textAllCaps="false"
                         android:typeface="normal"

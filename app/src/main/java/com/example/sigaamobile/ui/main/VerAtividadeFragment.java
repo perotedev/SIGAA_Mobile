@@ -1,6 +1,7 @@
 package com.example.sigaamobile.ui.main;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
 
 import com.example.sigaamobile.MainActivity;
@@ -49,6 +51,7 @@ public class VerAtividadeFragment extends Fragment {
         ImageView btnArrowRight = view.findViewById(R.id.btn_ir_atividade);
         TextView textAreaDoc = view.findViewById(R.id.doc_anexado);
         RelativeLayout btnSelectDoc = view.findViewById(R.id.btn_selecionar_doc);
+        AppCompatButton btnAnexoAtividade = view.findViewById(R.id.btn_baixar_anexo_atividade);
 
         btnArrowRight.setVisibility(View.INVISIBLE);
         titleDetalheCard.setHeight(0);
@@ -72,6 +75,12 @@ public class VerAtividadeFragment extends Fragment {
             intent.setType("*/*");
             intent = Intent.createChooser(intent, "Choose a file");
             startActivity(intent);
+        });
+
+        btnAnexoAtividade.setOnClickListener(v -> {
+            String link = "https://www.caceres.mt.gov.br/fotos_institucional_downloads/2.pdf";
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+            requireContext().startActivity(browserIntent);
         });
 
     }
