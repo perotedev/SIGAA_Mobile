@@ -8,16 +8,17 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.sigaamobile.MainActivity;
 import com.example.sigaamobile.R;
 import com.example.sigaamobile.models.mAtividade;
 import com.example.sigaamobile.models.mAtividadesDisciplina;
 import com.example.sigaamobile.models.mQtdAtividadesResumo;
+import com.example.sigaamobile.ui.dialog.AlertaSemAtividadesDialogFragment;
 import com.example.sigaamobile.utils.AnimateChangeHeight;
 
 import java.util.ArrayList;
@@ -90,11 +91,10 @@ public class AtividadesDisciplinasAdapter extends RecyclerView.Adapter<Atividade
             if (atividades.size() > 0){
                 this.onClickCard(listaAtividades, arrowDown, position, qtdAtividades);
             } else {
-                Toast.makeText(
-                        context,
-                        "Sem atividades cadastradas para "+mAtividadesDisciplina.getNomeDisciplina()+"!",
-                        Toast.LENGTH_SHORT)
-                        .show();
+                AlertaSemAtividadesDialogFragment dialog = new AlertaSemAtividadesDialogFragment(
+                        "Sem atividades cadastradas para "+mAtividadesDisciplina.getNomeDisciplina()+"!"
+                );
+                dialog.show(((MainActivity)holder.itemView.getContext()).getSupportFragmentManager(), "semAtividade");
             }
         });
 
