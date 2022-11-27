@@ -61,6 +61,10 @@ public class VerAtividadeFragment extends Fragment {
         fimAtividade.setText(DateTransform.transformToStringDate(mAtividade.getDataFim()));
         statusAtividade.setText(mAtividade.getStatus());
 
+        ViewGroup.MarginLayoutParams margins = new ViewGroup.MarginLayoutParams(descricaoAtividade.getLayoutParams());
+        margins.setMargins(0,0,0,0);
+        descricaoAtividade.setLayoutParams(margins);
+
         textAreaDoc.setOnClickListener(v -> {
 //            String path = Environment.getExternalStorageDirectory()+"/teste_sigaa/";
 //            Uri uri = Uri.parse(path);

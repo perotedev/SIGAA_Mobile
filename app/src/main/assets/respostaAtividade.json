@@ -1,0 +1,53 @@
+{
+  "comment": "Sample data structure of respostaAtividade",
+  "respostas": [
+    {
+      "atividadeId": 1,
+      "idAluno": 1,
+      "comentarioAluno": "Segue em anexo a resposta da atividade 01, boa tarde professor.",
+      "comentarioProfessor": "Nota 9,5. Não respondeu todas as questões da atividade solicitada.",
+      "anexoRespostaUrl": "https://www.caceres.mt.gov.br/fotos_institucional_downloads/2.pdf",
+      "anexoCorrecaoUrl": "https://www.caceres.mt.gov.br/fotos_institucional_downloads/2.pdf"
+    },
+    {
+      "atividadeId": 3,
+      "idAluno": 1,
+      "comentarioAluno": "Segue em anexo a resposta da atividade 01, boa tarde professor.",
+      "comentarioProfessor": "Não respondeu todas as questões da atividade solicitada.",
+      "anexoRespostaUrl": "https://www.caceres.mt.gov.br/fotos_institucional_downloads/2.pdf",
+      "anexoCorrecaoUrl": ""
+    },
+    {
+      "atividadeId": 5,
+      "idAluno": 1,
+      "comentarioAluno": "Boa noite professor, segue em anexo o PDF da resenha.",
+      "comentarioProfessor": "Parabéns, ótimo texto. Gostei da abordagem utilizada para exemplificar cada tipo de desneho.",
+      "anexoRespostaUrl": "https://www.caceres.mt.gov.br/fotos_institucional_downloads/2.pdf",
+      "anexoCorrecaoUrl": "https://www.caceres.mt.gov.br/fotos_institucional_downloads/2.pdf"
+    },
+    {
+      "atividadeId": 1,
+      "idAluno": 2,
+      "comentarioAluno": "Segue em anexo a resposta da atividade 01, boa tarde professor.",
+      "comentarioProfessor": "Nota 9,5. Não respondeu todas as questões da atividade solicitada.",
+      "anexoRespostaUrl": "https://www.caceres.mt.gov.br/fotos_institucional_downloads/2.pdf",
+      "anexoCorrecaoUrl": "https://www.caceres.mt.gov.br/fotos_institucional_downloads/2.pdf"
+    },
+    {
+      "atividadeId": 3,
+      "idAluno": 2,
+      "comentarioAluno": "Segue em anexo a resposta da atividade 01, boa tarde professor.",
+      "comentarioProfessor": "Não respondeu todas as questões da atividade solicitada.",
+      "anexoRespostaUrl": "https://www.caceres.mt.gov.br/fotos_institucional_downloads/2.pdf",
+      "anexoCorrecaoUrl": ""
+    },
+    {
+      "atividadeId": 5,
+      "idAluno": 2,
+      "comentarioAluno": "Boa noite professor, segue em anexo o PDF da resenha.",
+      "comentarioProfessor": "Parabéns, ótimo texto. Gostei da abordagem utilizada para exemplificar cada tipo de desneho.",
+      "anexoRespostaUrl": "https://www.caceres.mt.gov.br/fotos_institucional_downloads/2.pdf",
+      "anexoCorrecaoUrl": "https://www.caceres.mt.gov.br/fotos_institucional_downloads/2.pdf"
+    }
+  ]
+}

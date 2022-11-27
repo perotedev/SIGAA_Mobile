@@ -72,7 +72,7 @@
           "dataInicio": 1663377018,
           "dataFim": 1663722618,
           "titulo": "Atividade Individual",
-          "descricao": "Elabore uma resenha crítica sobre o artigo em enviado em aenxo.",
+          "descricao": "Elabore uma resenha crítica sobre o artigo em enviado em anexo.",
           "status": "Atividade entregue",
           "anexoAtividadeUrl": ""
         }
@@ -87,6 +87,95 @@
     {
       "disciplinaId": 6,
       "idAluno": 1,
+      "nomeDisciplina": "ZL - Teoria e Prática de Jardinagem I",
+      "atividades": []
+    },
+    {
+      "disciplinaId": 1,
+      "idAluno": 2,
+      "nomeDisciplina": "ZL - Matemática Básica",
+      "atividades": [
+        {
+          "atividadeId": 1,
+          "statusId": 1,
+          "dataInicio": 1660093818,
+          "dataFim": 1662167418,
+          "titulo": "Atividade 01 - VALE NOTA",
+          "descricao": "Leia a descrição da atividade anexada a esta tarefa.",
+          "status": "Atividade entregue",
+          "anexoAtividadeUrl": ""
+        },
+        {
+          "atividadeId": 2,
+          "statusId": 0,
+          "dataInicio": 1663031418,
+          "dataFim": 1664154618,
+          "titulo": "Atividade 02",
+          "descricao": "Responda os exercícios do capítulo 3 do livro Matemárica Básica do autor NORMAN FREEMAN.",
+          "status": "Aguardando entrega da atividade",
+          "anexoAtividadeUrl": ""
+        }
+      ]
+    },
+    {
+      "disciplinaId": 2,
+      "idAluno": 2,
+      "nomeDisciplina": "ZL - Desenho de Apresentação",
+      "atividades": []
+    },
+    {
+      "disciplinaId": 3,
+      "idAluno": 2,
+      "nomeDisciplina": "ZL - Informática",
+      "atividades": [
+        {
+          "atividadeId": 3,
+          "statusId": 1,
+          "dataInicio": 1660612218,
+          "dataFim": 1662167418,
+          "titulo": "Atividade 01",
+          "descricao": "Responda o questionário em anexo sobre a história da computação.",
+          "status": "Atividade entregue",
+          "anexoAtividadeUrl": ""
+        }
+      ]
+    },
+    {
+      "disciplinaId": 4,
+      "idAluno": 2,
+      "nomeDisciplina": "ZL - História da Arte",
+      "atividades": [
+        {
+          "atividadeId": 4,
+          "statusId": 2,
+          "dataInicio": 1660612218,
+          "dataFim": 1662167418,
+          "titulo": "Atividade em Dupla",
+          "descricao": "Em dupla elabore um resumo de no mínimo 30 linhas sobre a arte antiga.",
+          "status": "Atividade não entregue",
+          "anexoAtividadeUrl": ""
+        },
+        {
+          "atividadeId": 5,
+          "statusId": 1,
+          "dataInicio": 1663377018,
+          "dataFim": 1663722618,
+          "titulo": "Atividade Individual",
+          "descricao": "Elabore uma resenha crítica sobre o artigo em enviado em anexo.",
+          "status": "Atividade entregue",
+          "anexoAtividadeUrl": ""
+        }
+      ]
+    },
+    {
+      "disciplinaId": 5,
+      "idAluno": 2,
+      "nomeDisciplina": "ZL - Português Instrumental",
+      "atividades": []
+    },
+    {
+      "disciplinaId": 6,
+      "idAluno": 2,
       "nomeDisciplina": "ZL - Teoria e Prática de Jardinagem I",
       "atividades": []
     }

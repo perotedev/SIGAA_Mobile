@@ -9,6 +9,7 @@ import com.example.sigaamobile.models.mDadosAcademicos;
 import com.example.sigaamobile.models.mDocumento;
 import com.example.sigaamobile.models.mFrequenciaTodasAulas;
 import com.example.sigaamobile.models.mNotasDisciplina;
+import com.example.sigaamobile.models.mRespostaAtividade;
 import com.google.gson.Gson;
 
 import org.json.JSONArray;
@@ -153,5 +154,25 @@ public class FromJson {
             }
         }
         return atividadesArray;
+    }
+
+    public static mRespostaAtividade getmRespostaAtividade(int idAtividade, int idAluno, Activity activity) {
+        mRespostaAtividade mRespostaAtividade = new mRespostaAtividade();
+        JsonReader jsonReader = new JsonReader(activity);
+        JSONArray jsonArray = jsonReader.read("respostas", "respostaAtividade.json");
+
+        for (int index = 0; index < jsonArray.length(); index ++){
+            try {
+                Gson gson = new Gson();
+                mRespostaAtividade resposta = gson.fromJson(jsonArray.get(index).toString(), mRespostaAtividade.class);
+                if (resposta.getAtividadeId() == idAtividade && resposta.getIdAluno() == idAluno){
+                    mRespostaAtividade = resposta;
+                    break;
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        return mRespostaAtividade;
     }
 }

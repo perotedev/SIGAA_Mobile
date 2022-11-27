@@ -70,12 +70,14 @@ public class DescricaoAtividadesAdapter extends ArrayAdapter<mAtividade> {
         View finalView = view;
         view.setOnClickListener(v ->{
             if (atividade.getStatusId() == 1){
-                this.navigateTo(finalView, R.id.verRespostaAtividadeFragment, null);
+                String jsonString = new Gson().toJson(atividade);
+                Bundle bundle = new Bundle();
+                bundle.putString("atividade", jsonString);
+                this.navigateTo(finalView, R.id.verRespostaAtividadeFragment, bundle);
             } else if (atividade.getStatusId() == 0){
                 String jsonString = new Gson().toJson(atividade);
                 Bundle bundle = new Bundle();
                 bundle.putString("atividade", jsonString);
-                System.out.println("stringAtividade: "+jsonString);
                 this.navigateTo(finalView, R.id.verAtividadeFragment, bundle);
             } else {
                 AtividadeExpiradaDialogFragment dialog = new AtividadeExpiradaDialogFragment();

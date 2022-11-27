@@ -151,8 +151,6 @@ public class AtividadesDisciplinasAdapter extends RecyclerView.Adapter<Atividade
                     "Atividade(s) não entregue(s)"
             ));
         }
-
-        System.out.println("arrayQtd: "+arrayQtds);
         return arrayQtds;
     }
 
