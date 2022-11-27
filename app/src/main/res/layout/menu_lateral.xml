@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:elevation="5dp"
+    app:cardElevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:padding="15dp">
+
+        <RelativeLayout
+            android:id="@+id/cabecalho_menu_lateral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp">
+
+            <ImageButton
+                android:layout_centerVertical="true"
+                android:id="@+id/btn_main_menu"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:background="@drawable/menu_24"
+                android:backgroundTint="?colorAccent"
+                android:paddingStart="5dp"
+                android:paddingEnd="10dp"
+                android:paddingVertical="5dp"
+                android:contentDescription="@string/desc_btn_main_menu"/>
+
+            <RelativeLayout
+                android:id="@+id/relavite_app_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_toEndOf="@+id/btn_main_menu">
+
+                <TextView
+                    android:id="@+id/sigaa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sigla_app"
+                    android:layout_marginEnd="2dp"
+                    android:textAlignment="textEnd"
+                    android:textColor="?colorAccent"
+                    android:textStyle="bold"
+                    android:textSize="25sp"/>
+
+                <TextView
+                    android:id="@+id/mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/type_app"
+                    android:layout_marginStart="2dp"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:layout_toEndOf="@+id/sigaa"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_below="@+id/cabecalho_menu_lateral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/expandable_header_menu">
+
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                app:layout_constraintEnd_toEndOf="@id/imageViewExpandableHeader"
+                app:layout_constraintStart_toStartOf="@id/imageViewExpandableHeader"
+                app:layout_constraintTop_toTopOf="@id/imageViewExpandableHeader"
+                app:srcCompat="@android:drawable/ic_notification_overlay"
+                app:tint="?colorOnPrimary"
+                android:contentDescription="@string/account_logo_bg" />
+
+            <ImageView
+                android:id="@+id/imageViewExpandableHeader"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintEnd_toStartOf="@+id/textViewExpandableHeader1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_account_circle_24"
+                app:tint="?colorAccent"
+                android:contentDescription="@string/account_logo" />
+
+            <TextView
+                android:id="@+id/textViewExpandableHeader1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="@string/nomeAluno"
+                app:layout_constraintBottom_toTopOf="@+id/textViewExpandableHeader2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewExpandableHeader"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewExpandableHeader2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginBottom="15dp"
+                android:text="@string/matricula"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/textViewExpandableHeader3"
+                app:layout_constraintStart_toEndOf="@+id/imageViewExpandableHeader"
+                app:layout_constraintTop_toBottomOf="@+id/textViewExpandableHeader1" />
+
+            <TextView
+                android:id="@+id/textViewExpandableHeader3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="@string/mat_number"
+                app:layout_constraintBottom_toBottomOf="@id/textViewExpandableHeader2"
+                app:layout_constraintStart_toEndOf="@+id/textViewExpandableHeader2"
+                app:layout_constraintTop_toTopOf="@+id/textViewExpandableHeader2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/expandable_header_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/info_menu_lateral1">
+
+            <TextView
+                android:id="@+id/curso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/curso"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_curso_nome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teste_plus_plus"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/curso"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/info_menu_lateral2"
+            android:layout_below="@+id/info_menu_lateral1">
+
+            <TextView
+                android:id="@+id/nivel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nivel"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_nivel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teste_plus"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/nivel"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/info_menu_lateral3"
+            android:layout_below="@+id/info_menu_lateral2">
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teste_plus"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/status"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/info_menu_lateral4"
+            android:layout_below="@+id/info_menu_lateral3">
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teste_plus_plus"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/email"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/info_menu_lateral5"
+            android:layout_below="@+id/info_menu_lateral4">
+
+            <TextView
+                android:id="@+id/entrada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/entrada"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_entrada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teste_plus_plus"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/entrada"
+                />
+        </RelativeLayout>
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/constraint_info"
+            android:layout_below="@+id/info_menu_lateral5"
+            android:layout_marginVertical="10dp"
+            layout="@layout/cards_info_academico"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/info_menu_lateral6"
+            android:layout_below="@+id/constraint_info">
+
+            <TextView
+                android:id="@+id/ch_obrigatoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ch_obrigatoria"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_ch_obrigatoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teste_numero"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/ch_obrigatoria"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/info_menu_lateral7"
+            android:layout_below="@+id/info_menu_lateral6">
+
+            <TextView
+                android:id="@+id/ch_optativa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ch_optativa"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_ch_optativa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teste_numero"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/ch_optativa"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/info_menu_lateral8"
+            android:layout_below="@+id/info_menu_lateral7">
+
+            <TextView
+                android:id="@+id/ch_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ch_total"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_ch_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teste_numero"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/ch_total"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/info_menu_lateral9"
+            android:layout_below="@+id/info_menu_lateral8">
+
+            <TextView
+                android:id="@+id/ch_complementar_pendente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ch_complementar"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_ch_complementar_pendente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teste_numero"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/ch_complementar_pendente"
+                />
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_deslogar_menu_lateral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/bgError"
+            app:cardCornerRadius="8dp"
+            android:elevation="2dp"
+            app:cardElevation="2dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/icon_btn_sair"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/logout_24"
+                    android:rotation="180"
+                    app:tint="@color/white"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/desc_btn_sair"/>
+
+                <TextView
+                    android:layout_toEndOf="@+id/icon_btn_sair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:text="@string/btn_deslogar"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

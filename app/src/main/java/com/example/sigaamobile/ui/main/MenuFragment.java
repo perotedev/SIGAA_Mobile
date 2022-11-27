@@ -5,6 +5,7 @@ import android.transition.TransitionInflater;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -39,8 +40,7 @@ public class MenuFragment extends Fragment {
         OnBackPressedCallback callback = new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
-                DialogAlertaOnBackMenuFragment dialog = new DialogAlertaOnBackMenuFragment();
-                dialog.show(requireActivity().getSupportFragmentManager(), "sair");
+                sairDoApp();
             }
         };
         requireActivity().getOnBackPressedDispatcher().addCallback(this, callback);
@@ -59,7 +59,7 @@ public class MenuFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        MainActivity.setNavBarButton(requireActivity(), R.id.btn_main_menu);
+        MainActivity.setNavBarButton(requireActivity(), R.id.btn_sair);
 
         SigaaSharedPreferences preferences = new SigaaSharedPreferences(requireContext());
         this.mAluno = FromJson.getmAluno(preferences.getInt("userId"), requireActivity());
@@ -69,6 +69,7 @@ public class MenuFragment extends Fragment {
         this.setDadosBasicos(view);
         this.setDadosAcademicos(view);
 
+        ImageButton btnSair = requireActivity().findViewById(R.id.btn_sair);
         ImageView arrowDown = view.findViewById(R.id.arrow_down);
         RelativeLayout expContent = view.findViewById(R.id.frame_exp_content);
         CardView cardInfo = view.findViewById(R.id.card_menu_general_info);
@@ -92,6 +93,10 @@ public class MenuFragment extends Fragment {
         btnFrequenccia.setOnClickListener(v -> this.navigateTo(R.id.frequenciaFragment));
         btnAtividades.setOnClickListener(v -> this.navigateTo(R.id.atividadesFragment));
         btnDocumentos.setOnClickListener(v -> this.navigateTo(R.id.documentosFragment));
+
+        btnSair.setOnClickListener(v -> {
+            this.sairDoApp();
+        });
     }
 
     private void navigateTo(int fragmentId){
@@ -168,5 +173,10 @@ public class MenuFragment extends Fragment {
                 requireActivity(),
                 R.string.app_name
         );
+    }
+
+    private void sairDoApp(){
+        DialogAlertaOnBackMenuFragment dialog = new DialogAlertaOnBackMenuFragment();
+        dialog.show(requireActivity().getSupportFragmentManager(), "sair");
     }
 }

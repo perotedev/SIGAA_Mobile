@@ -26,6 +26,7 @@
     <string name="ch_optativa">CH Optativa Pendente:</string>
     <string name="ch_total">CH Total Currículo:</string>
     <string name="ch_complementar">CH Complementar Pendente:</string>
+    <string name="btn_deslogar">Sair</string>
 
     <!--  Telas  -->
     <string name="notas">Ver Notas</string>
@@ -83,6 +84,10 @@
     <string name="icone_calendario">Icone de calendário</string>
     <string name="seta_direita">Seta para a direita</string>
     <string name="ver_senha">Botão para ver a senha</string>
+    <string name="icone_notas">Ícone botão de notas</string>
+    <string name="icone_frequencia">Ícone botão de frequencia</string>
+    <string name="icone_atividades">Ícone botão de atividades</string>
+    <string name="icone_documentos">Ícone do botão de documentos</string>
 
     <!--  Texto pra Teste  -->
     <string name="teste">Texto de Teste</string>
