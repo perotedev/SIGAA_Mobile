@@ -54,8 +54,8 @@ public class AtividadesDisciplinasAdapter extends RecyclerView.Adapter<Atividade
         RelativeLayout semAtividadesView = holder.itemView.findViewById(R.id.relative_no_atividades);
         RelativeLayout qtdAtividades = holder.itemView.findViewById(R.id.relative_atividades_qtd_resumo);
         RelativeLayout listaAtividades = holder.itemView.findViewById(R.id.relative_atividades_content);
-        RecyclerView listaResumo = holder.itemView.findViewById(R.id.recycler_view_qtd_atividades);
         ListView listViewAtividades = holder.itemView.findViewById(R.id.list_view_aulas);
+        RecyclerView listaResumo = holder.itemView.findViewById(R.id.recycler_view_qtd_atividades);
 
         tituloAtividade.setText(mAtividadesDisciplina.getNomeDisciplina());
 

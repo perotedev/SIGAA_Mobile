@@ -2,41 +2,12 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <ImageView
-        android:id="@+id/icon_status_resumo1"
-        android:layout_width="20dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/check_circle"
-        app:tint="?android:textColor"
-        android:contentDescription="@string/icone_calendario"
-        android:visibility="invisible"/>
-
-    <ImageView
-        android:id="@+id/icon_status_resumo2"
-        android:layout_width="20dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/not_disturb"
-        app:tint="?android:textColor"
-        android:contentDescription="@string/icone_calendario"
-        android:visibility="invisible"/>
-
-    <ImageView
-        android:id="@+id/icon_status_resumo3"
-        android:layout_width="20dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/cancel_icon"
-        app:tint="?android:textColor"
-        android:contentDescription="@string/icone_calendario"
-        android:visibility="invisible"/>
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/des_qtd_atividades_stauts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@+id/icon_status_resumo1"
         android:layout_centerVertical="true"
         android:layout_marginStart="3dp"
         android:text="@string/teste_plus_plus"/>

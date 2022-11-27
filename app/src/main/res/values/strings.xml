@@ -82,6 +82,9 @@
     <string name="arrow_down">Icon Chevron Down</string>
     <string name="btn_help">Botão de ajuda</string>
     <string name="icone_calendario">Icone de calendário</string>
+    <string name="icone_checked">Ícone de confirmado</string>
+    <string name="icone_aguardando">Ícone de aguardando entrega</string>
+    <string name="icone_nao_entregue">Ícone de não entregue</string>
     <string name="seta_direita">Seta para a direita</string>
     <string name="ver_senha">Botão para ver a senha</string>
     <string name="icone_notas">Ícone botão de notas</string>

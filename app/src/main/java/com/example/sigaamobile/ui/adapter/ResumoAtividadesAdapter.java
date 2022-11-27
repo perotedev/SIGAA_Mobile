@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -38,24 +37,6 @@ public class ResumoAtividadesAdapter extends RecyclerView.Adapter<ResumoAtividad
         String statusString = resumo.getQtdAtividades()+" "+resumo.getStatus();
         TextView status = holder.itemView.findViewById(R.id.des_qtd_atividades_stauts);
         status.setText(statusString);
-
-        ImageView iconStatusCancel = holder.itemView.findViewById(R.id.icon_status_resumo3);
-        ImageView iconStatusChecked = holder.itemView.findViewById(R.id.icon_status_resumo1);
-        ImageView iconStatusNotDisturb = holder.itemView.findViewById(R.id.icon_status_resumo2);
-
-        if (resumo.getStatusId() == 0){
-            iconStatusChecked.setVisibility(View.INVISIBLE);
-            iconStatusCancel.setVisibility(View.INVISIBLE);
-            iconStatusNotDisturb.setVisibility(View.VISIBLE);
-        } else if (resumo.getStatusId() == 1){
-            iconStatusChecked.setVisibility(View.VISIBLE);
-            iconStatusCancel.setVisibility(View.INVISIBLE);
-            iconStatusNotDisturb.setVisibility(View.INVISIBLE);
-        } else if (resumo.getStatusId() == 2) {
-            iconStatusChecked.setVisibility(View.VISIBLE);
-            iconStatusCancel.setVisibility(View.INVISIBLE);
-            iconStatusNotDisturb.setVisibility(View.INVISIBLE);
-        }
     }
 
     @Override
