@@ -72,7 +72,12 @@
         android:id="@+id/verAtividadeFragment"
         android:name="com.example.sigaamobile.ui.main.VerAtividadeFragment"
         android:label="fragment_ver_atividade"
-        tools:layout="@layout/fragment_ver_atividade" />
+        tools:layout="@layout/fragment_ver_atividade" >
+        <action
+            android:id="@+id/action_verAtividadeFragment_to_fragment_menu"
+            app:destination="@id/fragment_menu"
+            app:popUpToInclusive="true" />
+    </fragment>
     <fragment
         android:id="@+id/verRespostaAtividadeFragment"
         android:name="com.example.sigaamobile.ui.main.VerRespostaAtividadeFragment"
