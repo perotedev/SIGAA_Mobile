@@ -124,6 +124,7 @@
     <string name="atividades_sem_cadastro">Não foram cadastradas atividades para esta disciplina!</string>
     <string name="atividade_expirada">Esta atividade não está disponível.</string>
     <string name="documento_nao_anexado">Por favor, selecione um documento para enviar.</string>
+    <string name="atividade_enviada">Sua resposta foi enviada com sucesso!</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

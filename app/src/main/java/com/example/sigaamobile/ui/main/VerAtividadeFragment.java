@@ -26,6 +26,7 @@ import com.example.sigaamobile.MainActivity;
 import com.example.sigaamobile.R;
 import com.example.sigaamobile.models.mAtividade;
 import com.example.sigaamobile.ui.dialog.AlertaEnviarRespostaDialogFragment;
+import com.example.sigaamobile.ui.dialog.AtividadeEnviadaDialogFragment;
 import com.example.sigaamobile.utils.AttatchDocument;
 import com.example.sigaamobile.utils.DateTransform;
 import com.google.gson.Gson;
@@ -157,7 +158,10 @@ public class VerAtividadeFragment extends Fragment {
     }
 
     private void navigateToMenu(){
-        NavHostFragment.findNavController(VerAtividadeFragment.this).navigate(R.id.fragment_menu);
         requireActivity().findViewById(R.id.login_loader).setVisibility(View.INVISIBLE);
+        NavHostFragment.findNavController(VerAtividadeFragment.this).navigate(R.id.fragment_menu);
+        AtividadeEnviadaDialogFragment dialog = new AtividadeEnviadaDialogFragment();
+        dialog.setCancelable(false);
+        dialog.show(requireActivity().getSupportFragmentManager(), "atividadeEnviada");
     }
 }
