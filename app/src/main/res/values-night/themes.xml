@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.SIGAAMobile" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/blueSigaa</item>
+        <item name="colorPrimary">@color/blueSecondarySigaa</item>
         <item name="colorOnPrimary">@color/black</item>
         <item name="colorButtonNormal">@color/bg_dark</item>
         <!-- Secondary brand color. -->
