@@ -34,6 +34,8 @@ public class AtividadesDisciplinasAdapter extends RecyclerView.Adapter<Atividade
         this.maxHeightCards = new ArrayList<>();
     }
 
+
+
     @NonNull
     @Override
     public AtividadesDisciplinasHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

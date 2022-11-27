@@ -16,6 +16,7 @@
             android:id="@+id/recycler_view_notas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:transitionGroup="true"
             tools:listitem="@layout/card_notas"/>
 
     </RelativeLayout>
