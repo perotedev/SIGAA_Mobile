@@ -80,8 +80,8 @@ public class VerRespostaAtividadeFragment extends Fragment {
         titleDetalheCard.setHeight(0);
         titleAtividade.setText(mAtividade.getTitulo());
         descricaoAtividade.setText(mAtividade.getDescricao());
-        inicioAtividade.setText(DateTransform.transformToStringDate(mAtividade.getDataInicio()));
-        fimAtividade.setText(DateTransform.transformToStringDate(mAtividade.getDataFim()));
+        inicioAtividade.setText(DateTransform.transformToStringDate(mAtividade.getDataInicio(), DateTransform.SECONDS));
+        fimAtividade.setText(DateTransform.transformToStringDate(mAtividade.getDataFim(), DateTransform.SECONDS));
         statusAtividade.setText(mAtividade.getStatus());
         comentarioAluno.setText(mRespostaAtividade.getComentarioAluno());
         comentarioProfessor.setText(mRespostaAtividade.getComentarioProfessor());

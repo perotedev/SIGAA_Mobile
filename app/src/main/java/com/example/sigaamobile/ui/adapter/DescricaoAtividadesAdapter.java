@@ -55,8 +55,8 @@ public class DescricaoAtividadesAdapter extends ArrayAdapter<mAtividade> {
 
         titulo.setText(atividade.getTitulo());
         descricao.setText(atividade.getDescricao());
-        dataInicio.setText(DateTransform.transformToStringDate(atividade.getDataInicio()));
-        dataFim.setText(DateTransform.transformToStringDate(atividade.getDataFim()));
+        dataInicio.setText(DateTransform.transformToStringDate(atividade.getDataInicio(), DateTransform.SECONDS));
+        dataFim.setText(DateTransform.transformToStringDate(atividade.getDataFim(), DateTransform.SECONDS));
         status.setText(atividade.getStatus());
 
         if (atividade.getStatusId() == 0){

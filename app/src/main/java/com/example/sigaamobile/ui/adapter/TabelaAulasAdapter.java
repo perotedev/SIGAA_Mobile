@@ -48,7 +48,7 @@ public class TabelaAulasAdapter extends ArrayAdapter<mFrequenciaAula> {
             situacaoAula = "("+mFrequenciaAula.getQtdFaltas()+") falta(s)";
         }
 
-        data.setText(DateTransform.transformToStringDate(mFrequenciaAula.getDataAula()));
+        data.setText(DateTransform.transformToStringDate(mFrequenciaAula.getDataAula(), DateTransform.SECONDS));
         situacao.setText(situacaoAula);
 
         return view;
