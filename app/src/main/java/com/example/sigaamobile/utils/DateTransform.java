@@ -1,7 +1,6 @@
 package com.example.sigaamobile.utils;
 
 import android.annotation.SuppressLint;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -9,15 +8,15 @@ public class DateTransform {
     public static final int SECONDS = 1;
     public static final int MILISSECONDS = 2;
 
-    public static String transformToStringDate(int unixTimestamp, int type){
-        long timestamp;
+    public static String transformToStringDate(long unixTimestamp, int type){
+        long timestamp = unixTimestamp;
 
-        if (type == DateTransform.SECONDS){
-            timestamp = unixTimestamp*1000L;
-        } else if (type == DateTransform.MILISSECONDS){
-            timestamp = unixTimestamp;
-        } else {
-            throw new RuntimeException("Type not accepted!");
+        if (type == SECONDS){
+            timestamp = timestamp*1000L;
+        }
+
+        if (type != MILISSECONDS && type != SECONDS || timestamp < 0){
+            throw new RuntimeException("Timestamp or type invalid!");
         }
 
         Date date = new java.util.Date(timestamp);

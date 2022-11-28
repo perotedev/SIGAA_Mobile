@@ -9,7 +9,6 @@ public class UserTest {
 
     @Test
     public void usernameTest(){
-
         mUser.setUsername("carlos_andre");
         assertEquals("carlos_andre", mUser.getUsername());
     }
