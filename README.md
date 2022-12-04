@@ -1,5 +1,5 @@
-<div align="center" style="font-size: 50px;">SIGAA Mobile</div>
-<p align="center">
+# SIGAA Mobile
+<p>
   <img src="https://img.shields.io/badge/Android-10-4EA94B?style=flat&logo=android&logoColor=white">
   <img src="https://img.shields.io/badge/Android-11-4EA94B?style=flat&logo=android&logoColor=white">
   <img src="https://img.shields.io/badge/Android-12-4EA94B?style=flat&logo=android&logoColor=white">
