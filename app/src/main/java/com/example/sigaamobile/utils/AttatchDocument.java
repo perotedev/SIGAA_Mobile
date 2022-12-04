@@ -15,7 +15,7 @@ public class AttatchDocument {
         this.documentDirectoy = Uri.parse(documentDirectoy);
     }
 
-    public void setDocumentName(String documentName){
+    private void setDocumentName(String documentName){
         this.documentName = documentName;
 
     }
